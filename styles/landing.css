@@ -1,0 +1,17 @@
+.right-nav:last-child{
+    padding-right: 30px;
+}
+.logoShrink{
+    height: 60px !important;
+  transition: 0.5s;
+}
+.navShrink{
+   position: fixed;
+  /* transition: 0.5s; */
+  animation-timing-function: ease-in-out;
+
+  /* Quick on the way out */
+  transition: 0.5s;
+  width: 100%;
+  /* transition: all 0.4s ease-out; */
+}

@@ -6,13 +6,29 @@ import {
   StyledRUL,
   StyledRLI,
 } from "../stylecomponents/Header.styled";
+import { useDispatch, useSelector } from "react-redux";
+import { GetTheme } from "../../redux/slices/themeslices";
+import { GetMenus } from "../../redux/slices/menusubmenuslices";
 export default function Header() {
   const [cclass, setsClass] = useState("");
+  const [lclass, setLClass] = useState("");
+  const { theme } = useSelector((state) => state.theme);
+  const { menus } = useSelector((state) => state.Menus);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    async function FetchTeme() {
+      dispatch(GetTheme());
+      dispatch(GetMenus());
+    }
+    FetchTeme();
+  }, []);
   const changeBackground = () => {
     if (window.scrollY >= 55) {
       setsClass("navShrink");
+      setLClass("logoShrink");
     } else {
       setsClass("");
+      setLClass("");
     }
   };
   if (typeof window !== "undefined") {
@@ -20,12 +36,15 @@ export default function Header() {
   }
   return (
     <div id="nav" className={cclass}>
-      <NavBar background={"#810000"}>
+      <NavBar
+        background={theme[0]?.navbarBgColor}
+        color={theme[0]?.navbarColor}
+      >
         <StyledUL>
-          <StyledLI>Home</StyledLI>
-          <StyledLI>Home</StyledLI>
-          <StyledLI>Home</StyledLI>
-          <StyledLI>Home</StyledLI>
+          {menus.length > 0 &&
+            menus
+              ?.slice(0, 4)
+              .map((men) => <StyledLI key={men._id}>{men.MenuName}</StyledLI>)}
         </StyledUL>
         <div
           style={{
@@ -41,18 +60,19 @@ export default function Header() {
             alignItems: "center",
             justifyContent: "center",
           }}
+          className={lclass}
           id="logo"
         >
           ICSK-KW
         </div>
         <StyledRUL className="right-nav">
-          <StyledRLI>Home</StyledRLI>
-          <StyledRLI>Home</StyledRLI>
-          <StyledRLI>Home</StyledRLI>
-          <StyledRLI>Home</StyledRLI>
+          {menus.length > 0 &&
+            menus
+              ?.slice(4, 8)
+              .map((men) => <StyledLI key={men._id}>{men.MenuName}</StyledLI>)}
         </StyledRUL>
       </NavBar>
-      <NavBar background={"#fff"} color="#000">
+      {/* <NavBar background={"#fff"} color="#000">
         <StyledUL>
           <StyledLI>Home</StyledLI>
           <StyledLI>Home</StyledLI>
@@ -66,7 +86,7 @@ export default function Header() {
           <StyledRLI>Home</StyledRLI>
           <StyledRLI>Home</StyledRLI>
         </StyledRUL>
-      </NavBar>
+      </NavBar> */}
     </div>
   );
 }

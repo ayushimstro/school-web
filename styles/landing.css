@@ -5,6 +5,12 @@
     height: 60px !important;
   transition: 0.5s;
 }
+.headerBack{
+    background-image: url("/schoolbuilding.jpg");
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
 .navShrink{
    position: fixed;
   /* transition: 0.5s; */

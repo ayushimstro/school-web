@@ -1,22 +1,26 @@
 import React from "react";
-import {Button } from "react-bootstrap"
-export default function EventCard() {
+import { Button, Col, Row } from "react-bootstrap";
+export default function EventCard({ type, text, image, button }) {
   return (
     <div data-aos="zoom-in">
-
-    <div class="card p-3">
-      <div class="card__header">
-        
-        <h5>Adrian Johns - “The Science of Reading”</h5>
+      <div class="card p-3">
+        {type == "event" ? (
+          <Row>
+            <Col md={4}>
+              <img src={image} />
+            </Col>
+            <Col md={8} style={{ color: "#000" }}>
+              {text}
+            </Col>
+          </Row>
+        ) : (
+          <>
+            <div class="card__body">
+              <h4>{text}</h4>
+            </div>
+          </>
+        )}
       </div>
-      <div class="card__body">
-        <h4>6:00 pm - 7:00 pm</h4>
-        <p>
-        Seminary Co-op Bookstore
-        </p>
-        <Button variant="primary" className="calender-btn">Add to Calendar</Button>
-      </div>
-    </div>
     </div>
   );
 }

@@ -11,6 +11,7 @@ export default function Aboutus() {
     <>
     <Layout>
     <div className="about-us">
+       
         <div className="bgImage">
 
         </div>

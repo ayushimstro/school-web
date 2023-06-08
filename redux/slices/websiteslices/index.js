@@ -3,27 +3,47 @@ import {
   GetBaseMenu,
   GetBaseSubMenu,
   GetBaseTheme,
+  GetCMS,
+  GetAcademic,
+  GetNews,
+  GetGallery,
 } from "../../../services/websiteServices";
 
-export const GetMenus = createAsyncThunk("fetch/Menues", async () => {
+export const GetCMSData = createAsyncThunk("fetch/CMS", async (params) => {
   try {
-    const response = await GetBaseMenu();
+    const response = await GetCMS(params);
     return response.data;
   } catch (e) {
     return e;
   }
 });
-export const GetSubMenus = createAsyncThunk("fetch/SubMenues", async () => {
+export const GetNewsData = createAsyncThunk("fetch/News", async (params) => {
   try {
-    const response = await GetBaseSubMenu();
+    const response = await GetNews(params);
+    return response.data;
+  } catch (e) {
+    return e;
+  }
+});
+export const GetAcademicData = createAsyncThunk("fetch/Academic", async () => {
+  try {
+    const response = await GetAcademic();
+    return response.data;
+  } catch (e) {
+    return e;
+  }
+});
+export const GetGallerycData = createAsyncThunk("fetch/Gallery", async () => {
+  try {
+    const response = await GetGallery();
     return response.data;
   } catch (e) {
     return e;
   }
 });
 
-export const MenusSlice = createSlice({
-  name: "Menus",
+export const Websiteslice = createSlice({
+  name: "websitecontent",
   initialState: {
     menus: [],
     submenus: [],
@@ -46,4 +66,4 @@ export const MenusSlice = createSlice({
   },
 });
 
-export default MenusSlice.reducer;
+export default Websiteslice.reducer;

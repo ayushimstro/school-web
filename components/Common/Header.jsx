@@ -43,7 +43,15 @@ export default function Header() {
           {menus.length > 0 &&
             menus?.slice(0, 4).map((men) => (
               <StyleLink href={men.path} key={men._id}>
-                <StyledLI>{men.MenuName}</StyledLI>
+                <StyledLI>
+                  {" "}
+                  {men.MenuName}
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </StyledLI>
               </StyleLink>
             ))}
         </StyledUL>
@@ -70,7 +78,14 @@ export default function Header() {
           {menus.length > 0 &&
             menus?.slice(4, 8).map((men) => (
               <StyleLink href={men.path} key={men._id}>
-                <StyledLI>{men.MenuName}</StyledLI>
+                <StyledLI>
+                  {men.MenuName}
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </StyledLI>
               </StyleLink>
             ))}
         </StyledRUL>

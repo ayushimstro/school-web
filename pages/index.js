@@ -33,7 +33,7 @@ export default function Home() {
               </h2>
               <SliderComponent settings={settings}>
                 {arr.map((i) => (
-                  <Col key={i} md={3}>
+                  <Col key={i} md={3} sm={12}>
                     <EventCard
                       type={"event"}
                       button={true}
@@ -73,7 +73,7 @@ export default function Home() {
           <Row>
             <SliderComponent settings={settings3}>
               {arr.map((i) => (
-                <Col key={i} md={4}>
+                <Col key={i} md={4} className="row-gap">
                   <Card />
                 </Col>
               ))}

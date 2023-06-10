@@ -55,7 +55,7 @@ export default function Amaan() {
                       year 2019 - 2020 is as follows:
                     </h4>
                     <ul>
-                      <li>Children born not later than 30th March, 2015.</li>
+                      <li><i class="fa-regular fa-square-check"></i>Children born not later than 30th March, 2015.</li>
                       <li>Children born not later than 30th March, 2015.</li>
                       <li>Children born not later than 30th March, 2015.</li>
                       <li>Children born not later than 30th March, 2015.</li>

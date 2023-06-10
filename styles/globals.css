@@ -1,6 +1,10 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "./landing.css";
 @import "./common.css";
+@import "./responsive.css";
+@import "./blog.css";
+
+
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 @font-face {

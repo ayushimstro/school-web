@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 
-export default function CommonSLider({ children }) {
-  return <Slider>{children}</Slider>;
+export default function CommonSLider({ settings, children }) {
+  return <Slider {...settings}>{children}</Slider>;
 }

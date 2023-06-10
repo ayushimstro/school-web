@@ -21,6 +21,7 @@
 }
 .navShrink {
   position: fixed;
+  z-index:1;
   /* transition: 0.5s; */
   animation-timing-function: ease-in-out;
 
@@ -112,7 +113,7 @@ width: 400px;
 .event-slider .card{
   height: 225px;
   padding: 1rem;
-  width: 301px;
+  /* width: 301px; */
   
 }
 .event-slider .card h4{
@@ -179,6 +180,27 @@ font-size: 1rem;
   background-size: cover;
   height: 100vh;
 }
+.bgImage2 {
+  background-image: url("/schoolbuilding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.highlight-content p{
+ color: #185b2d;
+}
+.values-row .card{
+  width: 400px;
+}
+.our-mission h2{
+  color: #000;
+}
+.our-mission .card{
+  height: 184px;
+}
+.highlight-content h4{
+ color: #000;
+}
 .prayer {
   background-color: #185b2d;
 }
@@ -224,14 +246,17 @@ font-size: 1rem;
 .ciriculam p {
   color: #fff;
 }
-.remedial-coaching {
-  color: #fff;
+.remedial-coaching p span{
+  color: #fff !important;
 }
 .our-course,
 .special-coaching .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   border-bottom: 2px solid #185b2d !important;
   border: 0;
+  color: #000;
+}
+.coaching{
   color: #000;
 }
 .our-course,

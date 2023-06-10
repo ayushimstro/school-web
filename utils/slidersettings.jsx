@@ -41,6 +41,8 @@ export const settings3 = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
+  className: "center",
+  centerMode: true,
   responsive: [
     {
       breakpoint: 1024,

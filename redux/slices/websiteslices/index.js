@@ -45,23 +45,24 @@ export const GetGallerycData = createAsyncThunk("fetch/Gallery", async () => {
 export const Websiteslice = createSlice({
   name: "websitecontent",
   initialState: {
-    menus: [],
-    submenus: [],
-    menuserror: "",
+    news: [],
+    cms: [],
+    newserror: "",
+    cmserror: "",
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(GetMenus.fulfilled, (state, action) => {
-      state.menus = action.payload.data;
+    builder.addCase(GetNewsData.fulfilled, (state, action) => {
+      state.news = action.payload.data;
     });
-    builder.addCase(GetMenus.rejected, (state, action) => {
-      state.menuserror = action.payload;
+    builder.addCase(GetNewsData.rejected, (state, action) => {
+      state.newserror = action.payload;
     });
-    builder.addCase(GetSubMenus.fulfilled, (state, action) => {
-      state.submenus = action.payload.data;
+    builder.addCase(GetCMSData.fulfilled, (state, action) => {
+      state.cms = action.payload.data;
     });
-    builder.addCase(GetSubMenus.rejected, (state, action) => {
-      state.menuserror = action.payload;
+    builder.addCase(GetCMSData.rejected, (state, action) => {
+      state.cmserror = action.payload;
     });
   },
 });

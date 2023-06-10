@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { GetBaseTheme } from "../../../services/themeServices";
+import { GetBaseTheme } from "../../../services/websiteServices";
 
 export const GetTheme = createAsyncThunk("fetch/theme", async () => {
   try {

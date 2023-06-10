@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { GetTheme } from "../../redux/slices/themeslices";
 import { GetMenus } from "../../redux/slices/menusubmenuslices";
 import Link from "next/link";
+import { GetNews } from "../../services/websiteServices";
 export default function Header() {
   const [cclass, setsClass] = useState("");
   const [lclass, setLClass] = useState("normal-logo");
@@ -53,6 +54,7 @@ export default function Header() {
             color: "#000",
             height: 90,
             width: 200,
+            zIndex: 1,
             boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 50px;",
             alignItems: "center",
             borderBottomRightRadius: 20,

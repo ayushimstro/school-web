@@ -2,17 +2,18 @@ import React from "react";
 import { Button, Container } from "react-bootstrap";
 import Footer from "../../components/Common/Footer";
 import Header from "../../components/Common/Header";
+import { StyleSpan } from "../../components/stylecomponents/Header.styled";
+import Layout from "../../components/Common/Layout";
 export default function Feature() {
   return (
-    <>
-    <Header/>
+    <Layout title={"Features | "}>
       <div className="feature">
         <div className="bgImage"></div>
 
         <div className="cloud bgRed text-center mt-4">
           <Container>
             {" "}
-            <h3>ICSK Cloud</h3>
+            <h2 style={{ color: "#fff" }}>ICSK Cloud</h2>
             <p>
               The ICSK Cloud is an solution exclusively for parents and staff
               which comprises of Features such as attendance, timetable,
@@ -23,9 +24,9 @@ export default function Feature() {
           </Container>
         </div>
         <div className="e-library container">
-          <h3 className="text-center mb-3">
-            High <span style={{ color: "#185b2d" }}>Tech Labs</span>
-          </h3>
+          <h2 className="text-center mb-3">
+            High <StyleSpan style={{ color: "#185b2d" }}>Tech Labs</StyleSpan>
+          </h2>
           <img src="https://media.istockphoto.com/id/1256323645/photo/multi-ethnic-female-team-studying-dna-mutations-using-microscope-in-protective-workwear.jpg?s=612x612&w=0&k=20&c=2G6dg3skp9mM7xwBlpw0HCeCZb4oHXDWKlCRpqyDyGA=" />
         </div>
         <div className="bgRed">
@@ -95,7 +96,7 @@ export default function Feature() {
         <div className="bgRed mt-4">
           <Container>
             <div className="text-center about-Counsel">
-              <h3>About The Counsellor</h3>
+              <h2 style={{ color: "#fff" }}>About The Counsellor</h2>
               <p>
                 The School has rich Psychology Department since the subject
                 Psychology is offered at Sr Secondary level and opted by many
@@ -111,10 +112,10 @@ export default function Feature() {
       </div>
       <div className="container mt-5">
         <div className="carrer-assessment">
-          <h4 className="text-center mb-4">
-            <span style={{ color: "#185b2d" }}>Psychometric</span> Career
-            Assessments
-          </h4>
+          <h2 className="text-center mb-4">
+            <StyleSpan style={{ color: "#185b2d" }}>Psychometric</StyleSpan>{" "}
+            Career Assessments
+          </h2>
           <div className="row">
             <div className="col-sm-4">
               <div class="card text-center">
@@ -143,7 +144,8 @@ export default function Feature() {
                   </div>
                 </div>
               </div>
-            </div>    <div className="col-sm-4">
+            </div>{" "}
+            <div className="col-sm-4">
               <div class="card text-center">
                 <div class="card__body">
                   <h4>Career Analysis for 8th, 9th & 10th Class</h4>
@@ -160,7 +162,6 @@ export default function Feature() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </Layout>
   );
 }

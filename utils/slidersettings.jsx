@@ -6,22 +6,26 @@ export const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   initialSlide: 0,
+  // className: "center",
+  // centerMode: true,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         infinite: true,
         dots: false,
+        arrows: false,
       },
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
       },
     },
     {
@@ -41,8 +45,6 @@ export const settings3 = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
-  className: "center",
-  centerMode: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -66,6 +68,8 @@ export const settings3 = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false,
+        centerMode: false,
       },
     },
   ],

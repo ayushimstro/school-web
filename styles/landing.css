@@ -1,47 +1,914 @@
 .right-nav:last-child {
   padding-right: 30px;
 }
+
 .logoShrink {
   height: 60px !important;
-  transition: 0.5s;
+  transition: height 0.5s;
 }
+
 .logoShrink img {
   height: 60px !important;
-  transition: 0.5s;
+  transition: height 0.5s;
 }
+
 .normal-logo img {
   height: 81px;
   width: 100px;
 }
+
 .headerBack {
   background-image: url("/schoolbuilding.jpg");
   background-size: cover;
   height: 100%;
   background-position: center;
 }
+
 .navShrink {
   position: fixed;
-  z-index:1;
-  /* transition: 0.5s; */
-  animation-timing-function: ease-in-out;
-
-  /* Quick on the way out */
-  transition: 0.5s;
+  z-index: 1;
   width: 100%;
-  /* transition: all 0.4s ease-out; */
+  transition: 0.5s;
 }
+
 .videos-section {
-  /* margin: 2rem; */
   color: #fff;
   cursor: pointer;
   background-color: #185b2d;
   padding-bottom: 2rem;
 }
+
 .videos-section h2 {
   text-align: center;
   font-weight: 600;
   padding-bottom: 2rem;
   padding-top: 2rem;
+}
+
+.news-section {
+  margin: 2rem;
+  color: #000;
+}
+.news-section .slick-next:before, .news-section .slick-prev:before{
+  
+  color: #185b2d;
+}
+
+.news-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.news-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 2px auto;
+}
+
+.videos-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #fff;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 4px auto;
+}
+
+.event2-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event2-section {
+  background-color: #185b2d;
+}
+
+.event2-section2 h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.videos-section .card {
+  width: 400px;
+}
+.videos-section .card .card__header img{
+  width: 400px;
+}
+
+.row-gap {
+  row-gap: 10px;
+}
+.card__header img {
+      width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+ .card .card__body h4{
+  font-size: 1rem;
+}
+.news-section .card {
+  width: 400px;
+  margin-right: 1rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.event-slider .card {
+  height: 225px;
+  padding: 1rem;
+}
+
+.counter span {
+  color: #fff;
+}
+
+.span-text {
+  color: #fff;
+}
+
+.event-slider .card h4 {
+  font-size: 1rem;
+}
+
+.event-slider h2 {
+  color: #000;
+}
+
+.event-slider2 .card {
+  height: 225px;
+}
+
+.event-slider2 h2 {
+  color: #000;
+}
+
+.event-slider2 h2 span {
+  color: #185b2d;
+}
+
+.event-section {
+  margin-bottom: 1.5rem;
+  background: #185b2d;
+}
+
+.counter-block-one .main-count {
+  font-size: 60px;
+  color: #fff;
+  line-height: initial;
+  margin-bottom: -8px;
+}
+
+.counter-block-one .main-count.text-lg {
+  font-size: 80px;
+}
+
+.counter-block-one .theme-mb-0 {
+  color: #fff;
+  padding-top: .8rem;
+}
+
+.event2-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 0px auto;
+}
+
+.calender-btn {
+  color: #fff;
+  background: #185b2d;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #185b2d;
+}
+
+.footer {
+  background-color: #185b2d;
+  color: #fff;
+  padding: 2rem;
+}
+
+.bgImage {
+  background-image: url("https://businessdoctors.co.uk/wp-content/uploads/2015/08/shutterstock_698744419-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgImage2 {
+  background-image: url("/schoolbuilding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.highlight-content p {
+  color: #185b2d;
+}
+
+.values-row .card {
+  width: 400px;
+}
+
+.our-mission h2 {
+  color: #000;
+}
+
+.our-mission .card {
+  height: 184px;
+}
+
+.highlight-content h4 {
+  color: #000;
+}
+
+.prayer {
+  background-color: #185b2d;
+  padding: 2rem 2rem;
+}
+
+.prayer h3 {
+  color: #fff;
+  padding: 2rem 0rem;
+}
+
+.prayer .card {
+  height: 346px;
+}
+
+.bgRed {
+  background-color: #185b2d;
+  padding: 1rem 0rem;
+}
+
+.cardwidth .card {
+  width: 100%;
+  height: 300px;
+}
+
+.section-div {
+  margin-top: 4rem;
+}
+
+.team .card {
+  width: 100%;
+}
+
+.about-senior {
+  color: #fff;
+}
+
+.about-senior p {
+  margin-top: 0rem;
+}
+
+.admission {
+  margin-top: 3rem;
+}
+
+.admission .card-body ul li {
+  margin-bottom: 2rem;
+}
+
+.admission .card ul li {
+  display: flex;
+  margin-bottom: .6rem;
+}
+
+.admission .card ul li img {
+  width: 15px;
+    margin-right: 0.6rem;
+    height: 15px;
+}
+
+.small-adm .card {
+  height: 340px;
+}
+
+.ciriculam p {
+  color: #fff;
+}
+
+.remedial-coaching p span {
+  color: #fff !important;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #185b2d !important;
+  border: 0;
+  color: #000;
+}
+
+.coaching {
+  color: #000;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-link {
+  color: #185b2d;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: .5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.nav {
+  z-index: 1;
+  position: relative;
+}
+
+.newssection p {
+  font-size: 1rem;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  background-color: #185b2d;
+
+  border-bottom: 1px solid #185b2d;
+  padding: .5rem;
+  transition: .3s ease;
+
+}
+
+li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 140px;
+  z-index: 1;
+}
+
+li:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+li .dropdown-content {
+  display: none;
+}
+
+.cloud {
+  color: #fff;
+}
+
+.e-library img {
+  width: 100%;
+}
+
+.counsel .card {
+  height: 230px;
+}
+
+.counceler img {
+  width: 100%;
+  height: 500px;
+}
+
+.counceler {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.center-text {
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  color: #fff;
+}
+
+.asses-btn {
+  background-color: #185b2d;
+  border: 1px solid #185b2d;
+}
+
+.about-Counsel {
+  color: #fff;
+}
+
+.contact-detail label {
+  display: block;
+}
+
+.contact-detail {
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.category ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.list-page {
+  color: #fff;
+}
+
+.right-nav:last-child {
+  padding-right: 30px;
+}
+
+.logoShrink {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.logoShrink img {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.normal-logo img {
+  height: 81px;
+  width: 100px;
+}
+
+.headerBack {
+  background-image: url("/schoolbuilding.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+
+.navShrink {
+  position: fixed;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.videos-section {
+  color: #fff;
+  cursor: pointer;
+  background-color: #185b2d;
+  padding-bottom: 2rem;
+}
+
+.videos-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.news-section {
+  margin: 2rem;
+  color: #000;
+}
+
+.news-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.news-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 2px auto;
+}
+
+.videos-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #fff;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 4px auto;
+}
+
+.event2-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event2-section {
+  background-color: #185b2d;
+}
+
+.event2-section2 h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.videos-section .card {
+  width: 400px;
+}
+
+.row-gap {
+  row-gap: 10px;
+}
+
+.news-section .card {
+  width: 400px;
+  margin-right: 1rem;
+}
+
+.event-slider .card {
+  height: 225px;
+  padding: 1rem;
+}
+
+.counter span {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.span-text {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.event-slider .card h4 {
+  font-size: 1rem;
+}
+
+.event-slider h2 {
+  color: #000;
+}
+
+.event-slider2 .card {
+  height: 225px;
+}
+
+.event-slider2 h2 {
+  color: #000;
+}
+
+.event-slider2 h2 span {
+  color: #185b2d;
+}
+
+.event-section {
+  margin-bottom: 1.5rem;
+  background: #185b2d;
+}
+
+.counter-block-one .main-count {
+  font-size: 60px;
+  color: #fff;
+  line-height: initial;
+  margin-bottom: -8px;
+}
+
+.counter-block-one .main-count.text-lg {
+  font-size: 80px;
+}
+
+.counter-block-one .theme-mb-0 {
+  color: #fff;
+  padding-top: .8rem;
+}
+
+.event2-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 0px auto;
+}
+
+.calender-btn {
+  color: #fff;
+  background: #185b2d;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #185b2d;
+}
+
+.footer {
+  background-color: #185b2d;
+  color: #fff;
+  padding: 2rem;
+}
+
+.bgImage {
+  background-image: url("https://businessdoctors.co.uk/wp-content/uploads/2015/08/shutterstock_698744419-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgImage2 {
+  background-image: url("/schoolbuilding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.highlight-content p {
+  color: #185b2d;
+}
+
+.values-row .card {
+  width: 400px;
+}
+
+.our-mission h2 {
+  color: #000;
+}
+
+.our-mission .card {
+  height: 184px;
+}
+
+.highlight-content h4 {
+  color: #000;
+}
+
+.prayer {
+  background-color: #185b2d;
+  padding: 2rem 2rem;
+}
+
+.prayer h3 {
+  color: #fff;
+  padding: 2rem 0rem;
+}
+
+.prayer .card {
+  height: 346px;
+}
+
+.bgRed {
+  background-color: #185b2d;
+  padding: 1rem 0rem;
+}
+
+.cardwidth .card {
+  width: 100%;
+  height: 300px;
+}
+
+.section-div {
+  margin-top: 4rem;
+}
+
+.team .card {
+  width: 100%;
+}
+
+.about-senior {
+  color: #fff;
+}
+
+.about-senior p {
+  margin-top: 0rem;
+}
+
+.admission {
+  margin-top: 3rem;
+}
+
+.admission .card-body ul li {
+  margin-bottom: 2rem;
+}
+
+.admission .card ul li {
+  display: flex;
+  margin-bottom: .6rem;
+}
+
+.admission .card ul li img {
+  width: 20px;
+  margin-right: 0.6rem;
+}
+
+.small-adm .card {
+  height: 340px;
+}
+
+.ciriculam p {
+  color: #fff;
+}
+
+.remedial-coaching p span {
+  color: #fff !important;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #185b2d !important;
+  border: 0;
+  color: #000;
+}
+
+.coaching {
+  color: #000;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-link {
+  color: #185b2d;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav {
+  z-index: 1;
+  position: relative;
+}
+
+.newssection p {
+  font-size: 1rem;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 140px;
+  z-index: 1;
+}
+
+li:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+li .dropdown-content {
+  display: none;
+}
+
+.cloud {
+  color: #fff;
+}
+
+.e-library img {
+  width: 100%;
+}
+
+.counsel .card {
+  height: 230px;
+}
+
+.counceler img {
+  width: 100%;
+  height: 500px;
+}
+
+.counceler {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.center-text {
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  color: #fff;
+}
+
+.asses-btn {
+  background-color: #185b2d;
+  border: 1px solid #185b2d;
+}
+
+.about-Counsel {
+  color: #fff;
+}
+
+.contact-detail label {
+  display: block;
+}
+
+.contact-detail {
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.category ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.list-page {
+  color: #fff;
+}
+
+.right-nav:last-child {
+  padding-right: 30px;
+}
+
+.logoShrink {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.logoShrink img {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.normal-logo img {
+  height: 81px;
+  width: 100px;
+}
+
+.headerBack {
+  background-image: url("/schoolbuilding.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+
+.navShrink {
+  position: fixed;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.videos-section {
+  color: #fff;
+  cursor: pointer;
+  background-color: #185b2d;
+  padding-bottom: 2rem;
+}
+
+.videos-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.videos-section span{
+  font-size: 1.5rem;
+}
+.header-images{
+  height: 600px;
+  width: 100%;
+}
+.news-section span{
+  font-size: 1.5rem;
 }
 .news-section {
   margin: 2rem;
@@ -58,34 +925,24 @@
   content: "";
   display: block;
   width: 0;
-
-  /* padding-top: 1rem; */
   height: 1.5px;
   background: #185b2d;
   transition: width 0.3s;
   width: 10%;
   margin: 2px auto;
 }
-/* .news-section .news {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1500px;
-  margin-block: 2rem;
-  gap: 2rem;
-} */
+
 .videos-section h2::after {
   content: "";
   display: block;
   width: 0;
-
-  /* padding-top: 1rem; */
   height: 1.5px;
   background: #fff;
   transition: width 0.3s;
   width: 10%;
   margin: 4px auto;
 }
+
 .event2-section h2 {
   text-align: center;
   font-weight: 600;
@@ -93,79 +950,84 @@
   padding-top: 1rem;
   color: #000;
 }
-.event2-section{
-  background-color: #185b2d;;
+
+.event2-section {
+  background-color: #185b2d;
 }
+
 .event2-section2 h2 {
   text-align: center;
   font-weight: 600;
   padding-bottom: 2rem;
   padding-top: 1rem;
   color: #000;
-  
 }
-.videos-section  .card{
-/* width: 400px; */
-}
-.row-gap{
-  row-gap: 10px;
-}
-.news-section .card{
-/* width: 400px; */
-margin-right: 1rem;
-}
-.event-slider .card{
+
+.event-slider .card {
   height: 225px;
   padding: 1rem;
-  /* width: 301px; */
-  
 }
-.event-slider .card h4{
-font-size: 1rem;
+
+.counter span {
+  color: #fff;
 }
-.event-slider h2{
+
+.span-text {
+  color: #fff;
+}
+
+.event-slider .card h4 {
+  font-size: 1rem;
+}
+
+.event-slider h2 {
   color: #000;
 }
-.event-slider2 .card{
+
+.event-slider2 .card {
   height: 225px;
 }
-.event-slider2 h2{
+
+.event-slider2 h2 {
   color: #000;
 }
-.event-slider2 h2 span{
+
+.event-slider2 h2 span {
   color: #185b2d;
 }
-.event-section{
+
+.event-section {
   margin-bottom: 1.5rem;
-  
   background: #185b2d;
 }
+
 .counter-block-one .main-count {
   font-size: 60px;
- color: #fff;
+  color: #fff;
   line-height: initial;
   margin-bottom: -8px;
 }
+
 .counter-block-one .main-count.text-lg {
   font-size: 80px;
 }
+
 .counter-block-one .theme-mb-0 {
-  /* font-size: 80px; */
   color: #fff;
   padding-top: .8rem;
 }
+
 .event2-section h2::after {
   content: "";
   display: block;
   width: 0;
-
-  /* padding-top: 1rem; */
   height: 1.5px;
   background: #185b2d;
   transition: width 0.3s;
   width: 10%;
   margin: 0px auto;
 }
+
 .calender-btn {
   color: #fff;
   background: #185b2d;
@@ -173,96 +1035,117 @@ font-size: 1rem;
   border-radius: 5px;
   border: 1px solid #185b2d;
 }
+
 .footer {
   background-color: #185b2d;
   color: #fff;
   padding: 2rem;
 }
+
 .bgImage {
   background-image: url("https://businessdoctors.co.uk/wp-content/uploads/2015/08/shutterstock_698744419-scaled.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
+
 .bgImage2 {
   background-image: url("/schoolbuilding.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
-.highlight-content p{
- color: #185b2d;
+
+.highlight-content p {
+  color: #185b2d;
 }
-.values-row .card{
+
+.values-row .card {
   width: 400px;
 }
-.our-mission h2{
+
+.our-mission h2 {
   color: #000;
 }
-.our-mission .card{
+
+.our-mission .card {
   height: 184px;
 }
-.highlight-content h4{
- color: #000;
+
+.highlight-content h4 {
+  color: #000;
 }
+
 .prayer {
   background-color: #185b2d;
-}
-.prayer {
   padding: 2rem 2rem;
 }
+
 .prayer h3 {
   color: #fff;
   padding: 2rem 0rem;
 }
+
 .prayer .card {
   height: 346px;
 }
+
 .bgRed {
   background-color: #185b2d;
   padding: 1rem 0rem;
 }
+
 .cardwidth .card {
   width: 100%;
   height: 300px;
 }
+
 .section-div {
   margin-top: 4rem;
 }
+
 .team .card {
   width: 100%;
 }
+
 .about-senior {
   color: #fff;
 }
+
 .about-senior p {
   margin-top: 0rem;
 }
+
 .admission {
   margin-top: 3rem;
 }
+
 .admission .card-body ul li {
   margin-bottom: 2rem;
 }
-.admission .card ul li{
+
+.admission .card ul li {
   display: flex;
   margin-bottom: .6rem;
-
-
 }
-.admission .card ul li img{
+
+.admission .card ul li img {
   width: 20px;
   margin-right: 0.6rem;
 }
+
 .small-adm .card {
   height: 340px;
 }
+
 .ciriculam p {
   color: #fff;
 }
-.remedial-coaching p span{
+
+.remedial-coaching p span {
   color: #fff !important;
 }
+
 .our-course,
 .special-coaching .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
@@ -270,20 +1153,25 @@ font-size: 1rem;
   border: 0;
   color: #000;
 }
-.coaching{
+
+.coaching {
   color: #000;
 }
+
 .our-course,
 .special-coaching .nav-tabs .nav-link {
   color: #185b2d;
 }
+
 .footer ul li {
   list-style: none;
   margin-bottom: 1rem;
 }
+
 .footer ul {
   padding-left: 0;
 }
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -291,55 +1179,1350 @@ font-size: 1rem;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.nav {
+  z-index: 1;
+  position: relative;
+}
 
-li:hover .dropdown-content {display: block;}
+.newssection p {
+  font-size: 1rem;
+  color: #000;
+}
 
-li:hover .dropbtn {background-color: #3e8e41;}
-.dropdown-content{
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 140px;
+  z-index: 1;
+}
+
+li:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+li .dropdown-content {
   display: none;
 }
-.cloud{
+
+.cloud {
   color: #fff;
 }
-.e-library img{
-width: 100%;
+
+.e-library img {
+  width: 100%;
 }
-.counsel .card{
+
+.counsel .card {
   height: 230px;
 }
-.counceler img{
+
+.counceler img {
   width: 100%;
   height: 500px;
 }
-.counceler{
+
+.counceler {
   position: relative;
   margin-top: 3rem;
 }
-.center-text{
+
+.center-text {
   position: absolute;
   top: 25%;
   left: 13%;
-  color:#fff;
-}
-.asses-btn{
-  background-color: #185b2d;
-  border: 1px solid #185b2d ;
-}
-.about-Counsel{
   color: #fff;
 }
-.contact-detail label{
+
+.asses-btn {
+  background-color: #185b2d;
+  border: 1px solid #185b2d;
+}
+
+.about-Counsel {
+  color: #fff;
+}
+
+.contact-detail label {
   display: block;
 }
-.contact-detail{
+
+.contact-detail {
   background-color: #f2f2f2;
   padding: 1rem;
 }
-.category ul li{
+
+.category ul li {
   list-style: none;
   margin-bottom: 1rem;
 }
-.list-page{
+
+.list-page {
   color: #fff;
+}
+
+.right-nav:last-child {
+  padding-right: 30px;
+}
+
+.logoShrink {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.logoShrink img {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.normal-logo img {
+  height: 81px;
+  width: 100px;
+}
+
+.headerBack {
+  background-image: url("/schoolbuilding.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+
+.navShrink {
+  position: fixed;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.videos-section {
+  color: #fff;
+  cursor: pointer;
+  background-color: #185b2d;
+  padding-bottom: 2rem;
+}
+
+.videos-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.news-section {
+  margin: 2rem;
+  color: #000;
+}
+
+.news-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.news-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 2px auto;
+}
+
+.videos-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #fff;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 4px auto;
+}
+
+.event2-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event2-section {
+  background-color: #185b2d;
+}
+
+.event2-section2 h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event-slider .card {
+  height: 225px;
+  padding: 1rem;
+}
+
+.counter span {
+  color: #fff;
+}
+
+.span-text {
+  color: #fff;
+}
+
+.event-slider .card h4 {
+  font-size: 1rem;
+}
+
+.event-slider h2 {
+  color: #000;
+}
+
+.event-slider2 .card {
+  height: 225px;
+}
+
+.event-slider2 h2 {
+  color: #000;
+}
+
+.event-slider2 h2 span {
+  color: #185b2d;
+}
+
+.event-section {
+  margin-bottom: 1.5rem;
+  background: #185b2d;
+}
+
+.counter-block-one .main-count {
+  font-size: 60px;
+  color: #fff;
+  line-height: initial;
+  margin-bottom: -8px;
+}
+
+.counter-block-one .main-count.text-lg {
+  font-size: 80px;
+}
+
+.counter-block-one .theme-mb-0 {
+  color: #fff;
+  padding-top: .8rem;
+}
+
+.event2-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 0px auto;
+}
+
+.calender-btn {
+  color: #fff;
+  background: #185b2d;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #185b2d;
+}
+
+.footer {
+  background-color: #185b2d;
+  color: #fff;
+  padding: 2rem;
+}
+
+.bgImage {
+  background-image: url("https://businessdoctors.co.uk/wp-content/uploads/2015/08/shutterstock_698744419-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgImage2 {
+  background-image: url("/schoolbuilding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.highlight-content p {
+  color: #185b2d;
+}
+
+.values-row .card {
+  width: 400px;
+}
+
+.our-mission h2 {
+  color: #000;
+}
+
+.our-mission .card {
+  height: 184px;
+}
+
+.highlight-content h4 {
+  color: #000;
+}
+
+.prayer {
+  background-color: #185b2d;
+  padding: 2rem 2rem;
+}
+
+.prayer h3 {
+  color: #fff;
+  padding: 2rem 0rem;
+}
+
+.prayer .card {
+  height: 346px;
+}
+
+.bgRed {
+  background-color: #185b2d;
+  padding: 1rem 0rem;
+}
+
+.cardwidth .card {
+  width: 100%;
+  height: 300px;
+}
+
+.section-div {
+  margin-top: 4rem;
+}
+
+.team .card {
+  width: 100%;
+}
+
+.about-senior {
+  color: #fff;
+}
+
+.about-senior p {
+  margin-top: 0rem;
+}
+
+.admission {
+  margin-top: 3rem;
+}
+
+.admission .card-body ul li {
+  margin-bottom: 2rem;
+}
+
+.admission .card ul li {
+  display: flex;
+  margin-bottom: .6rem;
+}
+
+.admission .card ul li img {
+  width: 20px;
+  margin-right: 0.6rem;
+}
+
+.small-adm .card {
+  height: 340px;
+}
+
+.ciriculam p {
+  color: #fff;
+}
+
+.remedial-coaching p span {
+  color: #fff !important;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #185b2d !important;
+  border: 0;
+  color: #000;
+}
+
+.coaching {
+  color: #000;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-link {
+  color: #185b2d;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav {
+  z-index: 1;
+  position: relative;
+}
+
+.newssection p {
+  font-size: 1rem;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 140px;
+  z-index: 1;
+}
+
+li:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+li .dropdown-content {
+  display: none;
+}
+
+.cloud {
+  color: #fff;
+}
+
+.e-library img {
+  width: 100%;
+}
+
+.counsel .card {
+  height: 230px;
+}
+
+.counceler img {
+  width: 100%;
+  height: 500px;
+}
+
+.counceler {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.center-text {
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  color: #fff;
+}
+
+.asses-btn {
+  background-color: #185b2d;
+  border: 1px solid #185b2d;
+}
+
+.about-Counsel {
+  color: #fff;
+}
+
+.contact-detail label {
+  display: block;
+}
+
+.contact-detail {
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.category ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.list-page {
+  color: #fff;
+}
+
+.right-nav:last-child {
+  padding-right: 30px;
+}
+
+.logoShrink {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.logoShrink img {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.normal-logo img {
+  height: 81px;
+  width: 100px;
+}
+
+.headerBack {
+  background-image: url("/schoolbuilding.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+
+.navShrink {
+  position: fixed;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.videos-section {
+  color: #fff;
+  cursor: pointer;
+  background-color: #185b2d;
+  padding-bottom: 2rem;
+}
+
+.videos-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.news-section {
+  margin: 2rem;
+  color: #000;
+}
+
+.news-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.news-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 2px auto;
+}
+
+.videos-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #fff;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 4px auto;
+}
+
+.event2-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event2-section {
+  background-color: #185b2d;
+}
+
+.event2-section2 h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event-slider .card {
+  height: 225px;
+  padding: 1rem;
+}
+
+.counter span {
+  color: #fff;
+}
+
+.span-text {
+  color: #fff;
+}
+
+.event-slider .card h4 {
+  font-size: 1rem;
+}
+
+.event-slider h2 {
+  color: #000;
+}
+
+.event-slider2 .card {
+  height: 225px;
+}
+
+.event-slider2 h2 {
+  color: #000;
+}
+
+.event-slider2 h2 span {
+  color: #185b2d;
+}
+
+.event-section {
+  margin-bottom: 1.5rem;
+  background: #185b2d;
+}
+
+.counter-block-one .main-count {
+  font-size: 60px;
+  color: #fff;
+  line-height: initial;
+  margin-bottom: -8px;
+}
+
+.counter-block-one .main-count.text-lg {
+  font-size: 80px;
+}
+
+.counter-block-one .theme-mb-0 {
+  color: #fff;
+  padding-top: .8rem;
+}
+
+.event2-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 0px auto;
+}
+
+.calender-btn {
+  color: #fff;
+  background: #185b2d;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #185b2d;
+}
+
+.footer {
+  background-color: #185b2d;
+  color: #fff;
+  padding: 2rem;
+}
+
+.bgImage {
+  background-image: url("https://businessdoctors.co.uk/wp-content/uploads/2015/08/shutterstock_698744419-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgImage2 {
+  background-image: url("/schoolbuilding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.highlight-content p {
+  color: #185b2d;
+}
+
+.values-row .card {
+  width: 400px;
+}
+
+.our-mission h2 {
+  color: #000;
+}
+
+.our-mission .card {
+  height: 184px;
+}
+
+.highlight-content h4 {
+  color: #000;
+}
+
+.prayer {
+  background-color: #185b2d;
+  padding: 2rem 2rem;
+}
+
+.prayer h3 {
+  color: #fff;
+  padding: 2rem 0rem;
+}
+
+.prayer .card {
+  height: 346px;
+}
+
+.bgRed {
+  background-color: #185b2d;
+  padding: 1rem 0rem;
+}
+
+.cardwidth .card {
+  width: 100%;
+  height: 300px;
+}
+
+.section-div {
+  margin-top: 4rem;
+}
+
+.team .card {
+  width: 100%;
+}
+
+.about-senior {
+  color: #fff;
+}
+
+.about-senior p {
+  margin-top: 0rem;
+}
+
+.admission {
+  margin-top: 3rem;
+}
+
+.admission .card-body ul li {
+  margin-bottom: 2rem;
+}
+
+.admission .card ul li {
+  display: flex;
+  margin-bottom: .6rem;
+}
+
+.admission .card ul li img {
+  width: 20px;
+  margin-right: 0.6rem;
+}
+
+.small-adm .card {
+  height: 340px;
+}
+
+.ciriculam p {
+  color: #fff;
+}
+
+.remedial-coaching p span {
+  color: #fff !important;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #185b2d !important;
+  border: 0;
+  color: #000;
+}
+
+.coaching {
+  color: #000;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-link {
+  color: #185b2d;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav {
+  z-index: 1;
+  position: relative;
+}
+
+.newssection p {
+  font-size: 1rem;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 140px;
+  z-index: 1;
+}
+
+li:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+li .dropdown-content {
+  display: none;
+}
+
+.cloud {
+  color: #fff;
+}
+
+.e-library img {
+  width: 100%;
+}
+
+.counsel .card {
+  height: 230px;
+}
+
+.counceler img {
+  width: 100%;
+  height: 500px;
+}
+
+.counceler {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.center-text {
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  color: #fff;
+}
+
+.asses-btn {
+  background-color: #185b2d;
+  border: 1px solid #185b2d;
+}
+
+.about-Counsel {
+  color: #fff;
+}
+
+.contact-detail label {
+  display: block;
+}
+
+.contact-detail {
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+.NIOS{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  
+}
+.category ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.footer-logo{
+  filter: drop-shadow(2px 4px 6px black);
+    width: 199px;
+}
+.list-page {
+  color: #fff;
+}
+
+.right-nav:last-child {
+  padding-right: 30px;
+}
+
+.logoShrink {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.logoShrink img {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.normal-logo img {
+  height: 81px;
+  width: 100px;
+}
+
+.headerBack {
+  background-image: url("/schoolbuilding.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+
+.navShrink {
+  position: fixed;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.videos-section {
+  color: #fff;
+  cursor: pointer;
+  background-color: #185b2d;
+  padding-bottom: 2rem;
+}
+
+.videos-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.news-section {
+  margin: 2rem;
+  color: #000;
+}
+
+.news-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.news-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 2px auto;
+}
+
+.videos-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #fff;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 4px auto;
+}
+
+.event2-section h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event2-section {
+  background-color: #185b2d;
+}
+
+.event2-section2 h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #000;
+}
+
+.event-slider .card {
+  height: 225px;
+  padding: 1rem;
+}
+
+.counter span {
+  color: #fff;
+}
+
+.span-text {
+  color: #fff;
+}
+
+.event-slider .card h4 {
+  font-size: 1rem;
+}
+
+.event-slider h2 {
+  color: #000;
+}
+
+.event-slider2 .card {
+  height: 225px;
+}
+
+.event-slider2 h2 {
+  color: #000;
+}
+
+.event-section {
+  margin-bottom: 1.5rem;
+  background: #185b2d;
+}
+
+.counter-block-one .main-count {
+  font-size: 60px;
+  color: #fff;
+  line-height: initial;
+  margin-bottom: -8px;
+}
+
+.counter-block-one .main-count.text-lg {
+  font-size: 80px;
+}
+
+.counter-block-one .theme-mb-0 {
+  color: #fff;
+  padding-top: .8rem;
+}
+
+.event2-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #185b2d;
+  transition: width 0.3s;
+  width: 10%;
+  margin: 0px auto;
+}
+
+.calender-btn {
+  color: #fff;
+  background: #185b2d;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #185b2d;
+}
+
+.footer {
+  background-color: #185b2d;
+  color: #fff;
+  padding: 2rem;
+}
+
+.bgImage {
+  background-image: url("https://businessdoctors.co.uk/wp-content/uploads/2015/08/shutterstock_698744419-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgImage2 {
+  background-image: url("/schoolbuilding.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.highlight-content p {
+  color: #185b2d;
+}
+
+.values-row .card {
+  width: 400px;
+}
+
+.our-mission h2 {
+  color: #000;
+}
+
+.our-mission .card {
+  height: 184px;
+}
+
+.highlight-content h4 {
+  color: #000;
+}
+
+.prayer {
+  background-color: #185b2d;
+  padding: 2rem 2rem;
+}
+
+.prayer h3 {
+  color: #fff;
+  padding: 2rem 0rem;
+}
+
+.prayer .card {
+  height: 346px;
+}
+
+.bgRed {
+  background-color: #185b2d;
+  padding: 1rem 0rem;
+}
+
+.cardwidth .card {
+  width: 100%;
+  height: 300px;
+}
+
+.section-div {
+  margin-top: 4rem;
+}
+
+.team .card {
+  width: 100%;
+}
+
+.about-senior {
+  color: #fff;
+}
+
+.about-senior p {
+  margin-top: 0rem;
+}
+
+.admission {
+  margin-top: 3rem;
+}
+
+.admission .card-body ul li {
+  margin-bottom: 2rem;
+}
+
+.admission .card ul li {
+  display: flex;
+  margin-bottom: .6rem;
+}
+
+.admission .card ul li img {
+  width: 20px;
+  margin-right: 0.6rem;
+}
+
+.small-adm .card {
+  height: 340px;
+}
+
+.ciriculam p {
+  color: #fff;
+}
+
+.remedial-coaching p span {
+  color: #fff !important;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #185b2d !important;
+  border: 0;
+  color: #000;
+}
+
+.coaching {
+  color: #000;
+}
+
+.our-course,
+.special-coaching .nav-tabs .nav-link {
+  color: #185b2d;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav {
+  z-index: 1;
+  position: relative;
+}
+
+.newssection p {
+  font-size: 1rem;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 140px;
+  z-index: 1;
+}
+
+li:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+li .dropdown-content {
+  display: none;
+}
+
+.cloud {
+  color: #fff;
+}
+
+.e-library img {
+  width: 100%;
+}
+
+.counsel .card {
+  height: 230px;
+}
+
+.counceler img {
+  width: 100%;
+  height: 500px;
+  filter: brightness(0.5);
+}
+
+.counceler {
+  position: relative;
+  margin-top: 3rem;
+}
+.center-text h2{
+  font-size: 1.5rem;
+  color: white;
+}
+.center-text {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  color: #fff;
+}
+
+.asses-btn{
+  background-color: #185b2d;
+  border: 1px solid #185b2d;
+}
+.asses-btn:hover{
+  background-color: #fff;
+  border: 1px solid #185b2d;
+  color: #185b2d;
+}
+
+.about-Counsel {
+  color: #fff;
+}
+
+.contact-detail label {
+  display: block;
+}
+
+.contact-detail {
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.category ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.list-page {
+  color: #fff;
+}
+
+.right-nav:last-child {
+  padding-right: 30px;
+}
+
+.logoShrink {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.logoShrink img {
+  height: 60px !important;
+  transition: 0.5s;
+}
+
+.normal-logo img {
+  height: 81px;
+  width: 100px;
+}
+
+.headerBack {
+  background-image: url("/schoolbuilding.jpg");
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
+
+.navShrink {
+  position: fixed;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.videos-section {
+  color: #fff;
+  cursor: pointer;
+  background-color: #185b2d;
+  /* padding-bottom: */
 }

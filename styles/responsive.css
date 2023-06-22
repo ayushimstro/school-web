@@ -11,4 +11,61 @@
       .center-text{
         left:12%;
       }
+      .container{
+        margin: 0;
+      }
+      .header-images{
+        height: 200px;
+      }
+      .normal-logo{
+        height: 67px !important;
+      }
+      .normal-logo img {
+  height: 67px ;
+  width: 67px;
+}
+.news-section .card{
+  width: 287px;
+  
+}
+.videos-section .card{
+  width: 287px;
+  
+}
+.event-slider2, .our-mission, .prayer,.event-slider{
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.our-mission .card, .prayer .card,.event-slider2 .card,.event-slider .card{
+  height: auto;
+}
+.ciriculam{
+  padding: 1rem;
+}
+.admission .card{
+  height: auto;
+  margin-bottom: 1rem;
+}
+.Fees-section{
+  padding: 1rem
+}
+.Fees-section p{
+  font-size: 1rem
+}
+table, th, td, tr{
+  color: #000 !important;
+}
+.coaching,.remedial-coaching,.our-course,.value-education,.special-coaching,.highlight-content {
+  padding: 1rem;
+}
+.value-education .card{
+  margin-bottom: 1rem;
+}
+table {
+  overflow-x: scroll;
+}
+.section-div .card{
+  width: 350px;
+  height: auto;
+}
   }

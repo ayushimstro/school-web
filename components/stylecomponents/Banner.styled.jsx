@@ -38,8 +38,7 @@ export const StyleSpan = styled.span`
 `;
 
 export const StyledBanner = styled.div`
-  background-image: ${(props) => `url(${props.background} )`};
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  // background-image: ${(props) => `url(${props.background} )`};
+  // background-repeat: no-repeat;
+  // background-size: cover;
 `;

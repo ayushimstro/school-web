@@ -8,12 +8,18 @@ export const NavBar = styled.div`
   background: ${(props) =>
     props.background ? props.background : "#000"} !important;
   height: 38px;
+  width: 100%;
   color: ${(props) => (props.color ? props.color : "#fff")};
 `;
 
 export const StyledLI = styled.li`
   display: inline-block;
   padding: 5px 20px;
+  cursor: pointer;
+`;
+export const StyledMLI = styled.li`
+  display: block;
+  padding: 15px;
   cursor: pointer;
 `;
 
@@ -24,6 +30,10 @@ export const StyleLink = styled(Link)`
 `;
 export const StyledRLI = styled.li`
   display: inline-block;
+  padding: 15px;
+`;
+export const StyledMRLI = styled.li`
+  display: block;
   padding: 5px 20px;
 `;
 export const StyledUL = styled.ul`
@@ -32,9 +42,16 @@ export const StyledUL = styled.ul`
 export const StyledRUL = styled.ul`
   list-style: none;
 `;
+export const StyledMUL = styled.ul`
+  list-style: none;
+`;
+export const StyledMRUL = styled.ul`
+  list-style: none;
+`;
 
 export const StyleSpan = styled.span`
   color: ${(props) => (props.color ? props.color : "#000")};
+  font-size: 1.5rem;
 `;
 
 export const StyledButton = styled.button`

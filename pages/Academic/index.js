@@ -13,10 +13,13 @@ import Layout from "../../components/Common/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { GetCMSData } from "../../redux/slices/websiteslices";
 import renderHTML from "react-render-html";
+import HTMLReactParser from "html-react-parser";
+import useWindowDimensions from "../../components/Common/Dimensions";
 export default function Academic() {
   const dispatch = useDispatch();
   const { cms } = useSelector((state) => state.websitecontent);
   const coaching = cms?.filter((cm) => cm.sectionType == "coaching");
+  const board = cms?.filter((cm) => cm.sectionType == "board");
   console.log(coaching, "coaching");
   useEffect(() => {
     async function GetCMSS() {
@@ -24,6 +27,7 @@ export default function Academic() {
     }
     GetCMSS();
   }, [dispatch]);
+  const { width } = useWindowDimensions();
   return (
     <>
       <Layout>
@@ -39,27 +43,13 @@ export default function Academic() {
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Classes 1 to 5</Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {board.length > 0 && HTMLReactParser(board[0]?.description)}
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                   <Accordion.Header>Classes VI to VX</Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {board.length > 0 && HTMLReactParser(board[1]?.description)}
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -110,7 +100,7 @@ export default function Academic() {
               <h3 className="text-center">
                 <StyleSpan color="#185b2d">Enrichment coaching</StyleSpan>
               </h3>
-              <p data-aos="zoom-in">
+              <p data-aos={width < 768 ? "" : "zoom-in"}>
                 Enrichment classes for the high achievers are inculcated as a
                 special feature of the school calendar of curricular activities.
                 The school identifies the apex club of students through periodic
@@ -134,7 +124,7 @@ export default function Academic() {
                   {coaching.length > 0 && coaching[1].title}
                 </StyleSpan>
               </h3>
-              <p data-aos="zoom-out">
+              <p data-aos={width < 768 ? "" : "zoom-out"}>
                 {coaching.length > 0 && renderHTML(coaching[1].description)}
               </p>
             </Container>
@@ -149,7 +139,7 @@ export default function Academic() {
               >
                 <Tab eventKey="home" title="CBSE SOURCES">
                   <h3>CBSE-COURCES STREAMS</h3>
-                  <div data-aos="zoom-in">
+                  <div data-aos={width < 768 ? "" : "zoom-in"}>
                     <div className="card">
                       {" "}
                       <Table responsive="sm">
@@ -199,7 +189,7 @@ export default function Academic() {
                 </Tab>
                 <Tab eventKey="profile" title="NIOS">
                   <h3>NATIONAL INSTITUTE OF OPEN SCHOOLING 2019-2020</h3>
-                  <p>
+                  <p className="NIOS">
                     The Indian Community School, Kuwait holds open school
                     classes from the National Institute of Open Schooling,
                     Ministry of HRD, New Delhi. NIOS offers certification for
@@ -224,7 +214,7 @@ export default function Academic() {
                       <span>Language2</span>
                       <label className="ms-4">HINDI</label>
                     </div>
-                    <div className="mt-3">
+                    <div className="mt-3 NIOS">
                       {" "}
                       <span>Subject</span>
                       <label className="ms-4">
@@ -267,11 +257,11 @@ export default function Academic() {
             </h3>
             <Container>
               <Row>
-                <Col sm={6} md={6} data-aos="fade-right">
+                <Col sm={6} md={6} data-aos={width < 768 ? "" : "fade-up"}>
                   <div className="card">
                     <div className="card__body">
                       <h3>Sparsh</h3>
-                      <p>
+                      <p >
                         To instill the feelings of empathy and compassion in the
                         students, the school has initiated many activities.
                         ‘SPARSH‘ is an activity initiated by ICSK to sensitize
@@ -285,7 +275,7 @@ export default function Academic() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={6} md={6} data-aos="fade-left">
+                <Col sm={6} md={6} data-aos={width < 768 ? "" : "fade-up"}>
                   <div className="card">
                     <div className="card__body">
                       <h3>Sparsh</h3>
@@ -317,7 +307,7 @@ export default function Academic() {
               >
                 <Tab eventKey="home" title="CBSE SOURCES">
                   <h3>CBSE-COURCES STREAMS</h3>
-                  <div className="" data-aos="fade-left">
+                  <div className="" data-aos={width < 768 ? "" : "fade-up"}>
                     <div className="card">
                       {" "}
                       <Table responsive="sm">
@@ -366,7 +356,7 @@ export default function Academic() {
                   </div>
                 </Tab>
                 <Tab eventKey="profile" title="NIOS">
-                  <div className="" data-aos="fade-right">
+                  <div className="" data-aos={width < 768 ? "" : "fade-up"}>
                     <h3>NATIONAL INSTITUTE OF OPEN SCHOOLING 2019-2020</h3>
                     <p>
                       The Indian Community School, Kuwait holds open school

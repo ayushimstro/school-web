@@ -31,7 +31,7 @@ const counterUpContent = [
     animationDelay: "200",
   },
   {
-    id: 3,
+    id: 4,
     startCount: "0",
     endCount: "8000",
     endPointText: "+",

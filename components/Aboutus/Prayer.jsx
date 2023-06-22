@@ -1,7 +1,7 @@
 import React from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import renderHTML from "react-render-html";
-export default function Prayer({ prayer }) {
+export default function Prayer({ width, prayer }) {
   //   console.log(prayer, "prayer");
   return (
     <>
@@ -9,7 +9,7 @@ export default function Prayer({ prayer }) {
         <h3 className="text-center">Prayer</h3>
         <Container>
           <Row>
-            <Col sm={4} Col md={4} data-aos="zoom-in">
+            <Col sm={4} Col md={4} data-aos={width < 768 ? "" : "zoom-in"}>
               <div class="card">
                 <div class="card__header"></div>
                 <div class="card__body">
@@ -22,7 +22,7 @@ export default function Prayer({ prayer }) {
                 </div>
               </div>
             </Col>
-            <Col sm={4} Col md={4} data-aos="zoom-in">
+            <Col sm={4} Col md={4} data-aos={width < 768 ? "" : "zoom-in"}>
               <div class="card">
                 <div class="card__header"></div>
                 <div class="card__body">
@@ -30,7 +30,7 @@ export default function Prayer({ prayer }) {
                 </div>
               </div>
             </Col>
-            <Col sm={4} Col md={4} data-aos="zoom-in">
+            <Col sm={4} Col md={4} data-aos={width < 768 ? "" : "zoom-in"}>
               <div class="card">
                 <div class="card__header"></div>
                 <div class="card__body">

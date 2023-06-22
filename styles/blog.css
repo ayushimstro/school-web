@@ -334,6 +334,9 @@
   .hero-spacing {
     margin: 135px 65px 0;
   }
+  .hero-spacing-top{
+    margin: 0 65px 0;
+  }
   .box-layout {
     padding-left: 65px;
     padding-right: 65px;
@@ -4992,18 +4995,23 @@
   }
   /*^^^^^^^^^^^^^^^^^^^^^ Inside Page Banner One ^^^^^^^^^^^^^^^^^^^^^^^^*/
   .inside-hero-one {
-    background: #afecee;
+        background: #185b2d;
     text-align: center;
     padding: 105px 0 115px;
+    color: #fff;
+    
   }
   .inside-hero-one .page-title {
     font-size: 72px;
     font-weight: 500;
+    color: #fff;
+    font-family: 'Gotham';
   }
   .inside-hero-one p {
     font-size: 20px;
     padding-top: 24px;
     margin-bottom: 0;
+    font-family: 'Gotham';
   }
   /*^^^^^^^^^^^^^^^^^^^^^ Inside Page Banner Two ^^^^^^^^^^^^^^^^^^^^^^^^*/
   .inside-hero-two {
@@ -6146,6 +6154,7 @@
   .blog-section-four .blog-meta-wrapper {
     column-count: 2;
     grid-column-gap: 50px;
+    font-family: 'Gotham';
   }
   .blog-meta-four {
     margin-bottom: 80px;
@@ -6168,12 +6177,14 @@
     position: absolute;
     right: 10px;
     bottom: 20px;
+    font-family: 'Gotham';
   }
   .blog-meta-four .post-info {
     font-family: "gorditamedium";
     font-size: 16px;
     color: var(--heading);
     margin-top: 23px;
+    font-family: 'Gotham';
   }
   .blog-meta-four .post-info .date {
     font-family: "gorditaregular";
@@ -6186,6 +6197,7 @@
     color: var(--heading);
     display: block;
     margin: 11px 0 38px;
+    font-family: 'Gotham';
   }
   .blog-meta-four:hover .title {
     text-decoration: underline;
@@ -6370,11 +6382,12 @@
   }
   /*^^^^^^^^^^^^^^^^^^^^^ Inside Page Banner Six ^^^^^^^^^^^^^^^^^^^^^^^^*/
   .inside-hero-six .bg-container {
-    background: #afecee;
+    background: #185b2d;
     padding: 92px 0;
   }
   .blog-pubish-date {
     font-size: 16px;
+    color: #fff;
   }
   .blog-pubish-date a {
     font-family: "gorditamedium";
@@ -6384,10 +6397,11 @@
     text-decoration: underline;
   }
   .blog-heading-one {
-    font-family: "gorditamedium";
+    font-family: "Gotham";
     font-size: 52px;
     line-height: 1.44em;
     margin-bottom: 0;
+    color: #fff
   }
   .blog-breadcrumb .breadcrumb-item a,
   .blog-breadcrumb .breadcrumb-item {

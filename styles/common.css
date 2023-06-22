@@ -1,5 +1,6 @@
 .container {
-  margin-block: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   gap: 2rem;
 }
 
@@ -8,98 +9,105 @@ img {
   display: block;
   object-fit: cover;
 }
+
 .card {
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   width: clamp(20rem, calc(20rem + 2vw), 22rem);
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 1em;
   position: relative;
   margin-top: 0.5rem;
   width: 100%;
+  z-index: -1;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.button{
+  background-color: #185b2d;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+}
+.button:hover{
+  background-color: #fff;
+  color: #185b2d;
+  border: 1px solid #185b2d;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+}
+.bg-card .card{
+  height: 30vh;
+}
+.values-row .card__body {
+  height: 50vh;
+  overflow-y: scroll;
+}
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  background-color: #e0f0e9;
+font-family: 'GOTHAM';
 }
 
 .card:hover::before,
 .card:hover::after {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 0;
-  height: 0;
+  height: 2px;
   background: transparent;
   border: 2px solid transparent;
   border-radius: 1em;
-  height: 2px;
+  transition: width 0.3s;
+  z-index: 1;
 }
 
 .card:hover::before {
   animation: animateTopLeftBorder 0.5s forwards;
-  border-radius: 1em;
 }
 
 @keyframes animateTopLeftBorder {
   0% {
     width: 0;
-    height: 0;
     border-top-color: #185b2d;
-    border-radius: 1em;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
   }
   50% {
     width: 100%;
-    height: 0;
     border-top-color: #185b2d;
-    border-radius: 1em;
     border-right-color: #185b2d;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
   }
   100% {
     width: 100%;
     height: 100%;
     border-top-color: #185b2d;
-    border-radius: 1em;
     border-right-color: #185b2d;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
   }
 }
 
 .card:hover::after {
   animation: animateTopRightBorder 0.5s forwards;
-  border-radius: 1em;
 }
 
 @keyframes animateTopRightBorder {
   0% {
     width: 0;
-    height: 0;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-radius: 1em;
     border-bottom-color: transparent;
     border-left-color: #185b2d;
   }
   50% {
     width: 0;
     height: 100%;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-radius: 1em;
     border-bottom-color: #185b2d;
     border-left-color: #185b2d;
   }
   100% {
     width: 100%;
     height: 100%;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-radius: 1em;
     border-bottom-color: #185b2d;
     border-left-color: #185b2d;
   }
@@ -118,7 +126,10 @@ img {
   align-self: flex-start;
   padding: 0.25em 0.75em;
   border-radius: 1em;
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
 }
 
 .tag + .tag {
@@ -131,13 +142,11 @@ img {
 }
 
 .tag-brown {
-  background: #d1913c;
   background: linear-gradient(to bottom, #ffd194, #d1913c);
   color: #fafafa;
 }
 
 .tag-red {
-  background: #cb2d3e;
   background: linear-gradient(to bottom, #ef473a, #cb2d3e);
   color: #fafafa;
 }
@@ -145,23 +154,183 @@ img {
 .card__body h4 {
   font-size: 1.3rem;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .card__footer {
   display: flex;
   padding: 1rem;
   margin-top: auto;
+  transition: background-color 0.3s;
+}
+
+.card__footer:hover {
+  background-color: #f2f2f2;
 }
 
 .user {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
+  transition: transform 0.3s;
 }
 
 .user__image {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .user__info > small {
   color: #666;
 }
+.nav-tabs {
+  position: relative;
+}
+
+.nav-tabs::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #185b2d;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-item.nav-link.active::before {
+  width: 100%;
+}
+/* Set initial position for tab indicator */
+.nav-tabs .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* background-color: #185b2d; */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-tabs .nav-link{
+  color: #fff !important;
+}
+/* Animate sliding effect on active tab */
+.nav-tabs .nav-link.active{
+  color: #185b2d !important;
+}
+
+
+/* Add transition to tab text color */
+.nav-tabs .nav-link {
+  transition: color 0.3s;
+}
+
+/* Change text color on hover */
+.nav-tabs .nav-link:hover {
+  color: #000 !important;
+  background-color: #fff;
+}
+.fee-details .nav-tabs {
+  position: relative;
+}
+
+.fee-details .nav-tabs::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #185b2d;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-item.nav-link.active::before {
+  width: 100%;
+}
+/* Set initial position for tab indicator */
+.fee-details .nav-tabs .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* background-color: #185b2d; */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.fee-details .nav-tabs .nav-link{
+  color: #000;
+}
+/* Animate sliding effect on active tab */
+.fee-details .nav-tabs .nav-link.active{
+  color: #185b2d;
+}
+
+
+/* Add transition to tab text color */
+.fee-details .nav-tabs .nav-link {
+  transition: color 0.3s;
+}
+
+/* Change text color on hover */
+.fee-details .nav-tabs .nav-link:hover {
+  color: #185b2d !important;
+}
+
+/* Accordion styles */
+.accordion {
+  overflow: hidden;
+}
+
+/* Accordion item styles */
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item-header {
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #f5f5f5;
+}
+
+.accordion-item-header.active {
+  background-color: #185b2d !important;
+  color: #fff;
+}
+
+.accordion-item-header::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item-header.active::after {
+  content: "-";
+}
+
+.accordion-item-body {
+  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item-body.show {
+  max-height: 500px; /* Set an appropriate max-height value */
+}
+

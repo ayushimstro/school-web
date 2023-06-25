@@ -8,6 +8,8 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import { settings, settings2, settings3 } from "../../utils/slidersettings";
+
 import { StyleSpan } from "../../components/stylecomponents/Header.styled";
 import Layout from "../../components/Common/Layout";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,11 +17,13 @@ import { GetCMSData } from "../../redux/slices/websiteslices";
 import renderHTML from "react-render-html";
 import HTMLReactParser from "html-react-parser";
 import useWindowDimensions from "../../components/Common/Dimensions";
+import SliderComponent from "../../components/Common/Slider";
 export default function Academic() {
   const dispatch = useDispatch();
   const { cms } = useSelector((state) => state.websitecontent);
   const coaching = cms?.filter((cm) => cm.sectionType == "coaching");
   const board = cms?.filter((cm) => cm.sectionType == "board");
+  const Banner = cms?.filter((cm) => cm.sectionType == "banner");
   console.log(coaching, "coaching");
   useEffect(() => {
     async function GetCMSS() {
@@ -32,7 +36,23 @@ export default function Academic() {
     <>
       <Layout>
         <div className="">
-          <div className="bgImage"></div>
+          {Banner.length > 0 ? (
+            <SliderComponent settings={settings}>
+              {Banner?.map((ban) => (
+                // eslint-disable-next-line react/jsx-key
+                <div style={{ width: "100%" }}>
+                  <img
+                    src={ban.image}
+                    height={"600px"}
+                    width={"100%"}
+                    className="header-images"
+                  />
+                </div>
+              ))}
+            </SliderComponent>
+          ) : (
+            <div className="bgImage"></div>
+          )}
 
           <div className="board-exam bgRed">
             <Container>
@@ -261,7 +281,7 @@ export default function Academic() {
                   <div className="card">
                     <div className="card__body">
                       <h3>Sparsh</h3>
-                      <p >
+                      <p>
                         To instill the feelings of empathy and compassion in the
                         students, the school has initiated many activities.
                         ‘SPARSH‘ is an activity initiated by ICSK to sensitize

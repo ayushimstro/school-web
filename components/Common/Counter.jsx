@@ -2,6 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 // import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
+import useWindowDimensions from "./Dimensions";
 const CountUp = dynamic(() => import("react-countup"), {
   ssr: false,
 });
@@ -42,12 +43,13 @@ const counterUpContent = [
 
 const CounterUp = () => {
   const [focus, setFocus] = React.useState(false);
+  const { width } = useWindowDimensions();
   return (
     <>
       {counterUpContent.map((val, i) => (
         <div
           className="col-md-3 col-sm-6"
-          data-aos="fade-up"
+          data-aos={width > 768 ? "fade-up" : ""}
           data-aos-delay={val.animationDelay}
           key={val.id}
         >

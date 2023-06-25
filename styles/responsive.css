@@ -2,7 +2,7 @@
     .bgImage {
         background-repeat: no-repeat;
         background-size: contain;
-        height: 30vh;
+        height: 60vw;
     }
     .admission .card ul {
        padding-left: 0;
@@ -26,18 +26,36 @@
 }
 .news-section .card{
   width: 287px;
+  height: 90vw;
   
 }
 .videos-section .card{
-  width: 287px;
+  width: 347px;
   
 }
 .event-slider2, .our-mission, .prayer,.event-slider{
   margin-bottom: 1rem;
   padding: 1rem;
 }
-.our-mission .card, .prayer .card,.event-slider2 .card,.event-slider .card{
+.our-mission .card, .prayer .card,.event-slider2 .card,.event-slider .card,.team .card{
   height: auto;
+  z-index: 1;
+}
+.cardwidth .card{
+  height: auto;
+}
+.navShrink{
+  z-index: 9999;
+}
+.nav {
+  z-index: 9;
+}
+.card__header img{
+  height: auto;
+}
+.bg-card .card{
+  height: 30vh;
+  z-index: 1;
 }
 .ciriculam{
   padding: 1rem;
@@ -47,7 +65,15 @@
   margin-bottom: 1rem;
 }
 .Fees-section{
-  padding: 1rem
+  padding: 1rem;
+  overflow-x: scroll;
+}
+.Fees-section .card{
+  /* overflow-x: scroll; */
+  z-index: 1;
+}
+.Fees-section .card:hover{
+  border: none;
 }
 .Fees-section p{
   font-size: 1rem

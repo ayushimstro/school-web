@@ -7,7 +7,7 @@ import { string } from "prop-types";
 const Head = (props) => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || ""} ICKMS</title>
+    <title>{props.title || ""} | ICSK-KW</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@ const Head = (props) => (
       rel="stylesheet"
     />
     <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/logo.png" />
     {/* <link rel="stylesheet" href="../static/icons/icofont.min.css" /> */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,7 @@ const Head = (props) => (
       src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
       crossorigin
     ></script>
-    <script src="bower_components/aos/dist/aos.js"></script> 
+    <script src="bower_components/aos/dist/aos.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
       crossorigin

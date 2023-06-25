@@ -1,14 +1,45 @@
-import React from "react";
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useEffect } from "react";
 import { Button, Container } from "react-bootstrap";
 import Footer from "../../components/Common/Footer";
 import Header from "../../components/Common/Header";
 import { StyleSpan } from "../../components/stylecomponents/Header.styled";
 import Layout from "../../components/Common/Layout";
+import { useDispatch, useSelector } from "react-redux";
+import { GetCMSData } from "../../redux/slices/websiteslices";
+import SliderComponent from "../../components/Common/Slider";
+import { settings, settings2, settings3 } from "../../utils/slidersettings";
+
 export default function Feature() {
+  const dispatch = useDispatch();
+  const { cms } = useSelector((state) => state.websitecontent);
+  const Banner = cms?.filter((cm) => cm.sectionType == "banner");
+  useEffect(() => {
+    async function GetCMS() {
+      dispatch(GetCMSData("feature"));
+    }
+    GetCMS();
+  }, []);
   return (
     <Layout title={"Features | "}>
       <div className="feature">
-        <div className="bgImage"></div>
+        {Banner.length > 0 ? (
+          <SliderComponent settings={settings}>
+            {Banner?.map((ban) => (
+              // eslint-disable-next-line react/jsx-key
+              <div style={{ width: "100%" }}>
+                <img
+                  src={ban.image}
+                  height={"600px"}
+                  width={"100%"}
+                  className="header-images"
+                />
+              </div>
+            ))}
+          </SliderComponent>
+        ) : (
+          <div className="bgImage"></div>
+        )}
 
         <div className="cloud bgRed text-center mt-4">
           <Container>

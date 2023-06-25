@@ -53,41 +53,40 @@ font-family: 'GOTHAM';
 }
 table {
   width: 100%;
+  max-width: 800px; /* Adjust the maximum width as per your requirement */
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: .85;
+  font-size: 0.85rem;
   border-radius: 20%;
-font-family: 'GOTHAM';
-
+  font-family: 'GOTHAM';
+  overflow-x: auto;
 }
 
 table th,
 table td {
-  padding: 10px;
-  text-align: left;
   border: 1px solid #000;
-font-family: 'GOTHAM';
-
+  font-family: 'GOTHAM';
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
 }
 
 table thead th {
   background-color: #185b2d;
   color: #fff;
-font-family: 'GOTHAM';
-
+  font-family: 'GOTHAM';
 }
 
 table tbody tr:nth-child(even) {
   background-color: #f5f5f5;
-font-family: 'GOTHAM';
-
+  font-family: 'GOTHAM';
 }
 
 table tbody tr:hover {
   background-color: #e0f0e9;
-font-family: 'GOTHAM';
-
+  font-family: 'GOTHAM';
 }
+
 
 
 /* @media (prefers-color-scheme: dark) {
@@ -158,5 +157,47 @@ font-family: 'GOTHAM';
   }
   100% {
     transform: translate(24px, 0);
+  }
+}
+
+.shimmer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 300px;
+  background-color: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.shimmer-card:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-position: -50% 0;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -50% 0;
+  }
+  100% {
+    background-position: 150% 0;
   }
 }

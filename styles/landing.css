@@ -304,7 +304,11 @@
 }
 
 .ciriculam p {
-  color: #fff;
+  color: #000;
+}
+
+.ciriculam .card__body{
+  color: #000;
 }
 
 .remedial-coaching p span {
@@ -727,7 +731,7 @@ li .dropdown-content {
 }
 
 .ciriculam p {
-  color: #fff;
+  color: #000;
 }
 
 .remedial-coaching p span {
@@ -1139,7 +1143,7 @@ li .dropdown-content {
 }
 
 .ciriculam p {
-  color: #fff;
+  color: #000;
 }
 
 .remedial-coaching p span {
@@ -1542,7 +1546,7 @@ li .dropdown-content {
 }
 
 .ciriculam p {
-  color: #fff;
+  color: #000;
 }
 
 .remedial-coaching p span {
@@ -1945,7 +1949,7 @@ li .dropdown-content {
 }
 
 .ciriculam p {
-  color: #fff;
+  color: #000;
 }
 
 .remedial-coaching p span {
@@ -2351,9 +2355,33 @@ li .dropdown-content {
 }
 
 .ciriculam p {
-  color: #fff;
+  color: #000;
 }
+.gsc-search-box{
+  margin-top: 2rem !important;
+  width: 500px !important;
+}
+.gsc-input{
+  border-radius: 2rem;
+}
+.gsib_b{
+display: none;
+}
+.gsib_a{
+  border: none;
 
+}
+.links:hover{
+  color: white;
+  text-decoration: underline;
+  padding-bottom:1rem ;
+}
+.search-result{
+  margin: 2rem
+}
+.search-result-scroll{
+  margin: 0 2rem 2rem 2rem;
+}
 .remedial-coaching p span {
   color: #fff !important;
 }

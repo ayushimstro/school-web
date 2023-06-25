@@ -6,9 +6,16 @@ import Modal from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 import Layout from "../../components/Common/Layout";
 import { useDispatch, useSelector } from "react-redux";
-import { CreateENQ, GetBranch } from "../../redux/slices/websiteslices";
+import {
+  CreateENQ,
+  GetBranch,
+  GetCMSData,
+} from "../../redux/slices/websiteslices";
+import { settings, settings2, settings3 } from "../../utils/slidersettings";
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SliderComponent from "../../components/Common/Slider";
 export default function ContactUs() {
   const [open, setOpen] = useState(false);
   const { branch } = useSelector((state) => state.websitecontent);
@@ -19,6 +26,15 @@ export default function ContactUs() {
     Message: "",
     Branch: "",
   });
+
+  const { cms } = useSelector((state) => state.websitecontent);
+  const Banner = cms?.filter((cm) => cm.sectionType == "banner");
+  useEffect(() => {
+    async function GetCMS() {
+      dispatch(GetCMSData("contactus"));
+    }
+    GetCMS();
+  }, []);
   useEffect(() => {
     async function Getbranch() {
       dispatch(GetBranch());
@@ -31,9 +47,25 @@ export default function ContactUs() {
     setOpen(false);
   };
   return (
-    <Layout>
-      <div className="bgImage"></div>
-      <div className="contact-us container">
+    <Layout title={"Contact Us"}>
+      {Banner.length > 0 ? (
+        <SliderComponent settings={settings}>
+          {Banner?.map((ban) => (
+            // eslint-disable-next-line react/jsx-key
+            <div style={{ width: "100%" }}>
+              <img
+                src={ban.image}
+                height={"600px"}
+                width={"100%"}
+                className="header-images"
+              />
+            </div>
+          ))}
+        </SliderComponent>
+      ) : (
+        <div className="bgImage"></div>
+      )}
+      <div className="bgRed contact-us container">
         <Tabs
           defaultActiveKey="home"
           id="uncontrolled-tab-example"

@@ -26,6 +26,7 @@ import { StyledBanner } from "../components/stylecomponents/Banner.styled";
 import useWindowDimensions from "../components/Common/Dimensions";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Shimmer from "../components/Common/Shimmereffect";
 
 // import Footer from '../components/Common/Footer';
 export default function Home() {
@@ -78,39 +79,49 @@ export default function Home() {
               <h2 className="text-center">
                 Our <StyleSpan>Events</StyleSpan>
               </h2>
-              <SliderComponent settings={settings}>
-                {Events.map((eve, i) => (
-                  <Col key={eve._id} md={3}>
-                    <EventCard
-                      type={eve?.eventType}
-                      button={true}
-                      image={
-                        "https://w7.pngwing.com/pngs/894/996/png-transparent-school-building-cip-art-halton-catholic-district-school-board-student-building-school-angle-reading-school-supplies-thumbnail.png"
-                      }
-                      text={
-                        eve?.eventDescription &&
-                        HTMLReactParser(eve?.eventDescription)
-                      }
-                    />
-                  </Col>
-                ))}
-              </SliderComponent>
+              {Events.length == 0 ? (
+                <Shimmer type={"card-text"} />
+              ) : (
+                <SliderComponent settings={settings}>
+                  {Events.map((eve, i) => (
+                    <Col key={eve._id} md={3}>
+                      <EventCard
+                        type={eve?.eventType}
+                        button={true}
+                        width={width}
+                        image={
+                          "https://w7.pngwing.com/pngs/894/996/png-transparent-school-building-cip-art-halton-catholic-district-school-board-student-building-school-angle-reading-school-supplies-thumbnail.png"
+                        }
+                        text={
+                          eve?.eventDescription &&
+                          HTMLReactParser(eve?.eventDescription)
+                        }
+                      />
+                    </Col>
+                  ))}
+                </SliderComponent>
+              )}
             </Col>
             <Col md={6} className="event-slider">
               <h2 className="text-center">
                 Our <StyleSpan color="#185b2d">Features</StyleSpan>
               </h2>
-              <SliderComponent settings={settings}>
-                {features.map((featu, i) => (
-                  <Col key={featu._id} md={3}>
-                    <EventCard
-                      text={
-                        featu?.description && RenderHTML(featu?.description)
-                      }
-                    />
-                  </Col>
-                ))}
-              </SliderComponent>
+              {features.length == 0 ? (
+                <Shimmer type={"card-text"} />
+              ) : (
+                <SliderComponent settings={settings}>
+                  {features.map((featu, i) => (
+                    <Col key={featu._id} md={3}>
+                      <EventCard
+                        text={
+                          featu?.description && RenderHTML(featu?.description)
+                        }
+                        width={width}
+                      />
+                    </Col>
+                  ))}
+                </SliderComponent>
+              )}
             </Col>
           </Row>
         </Container>
@@ -121,25 +132,30 @@ export default function Home() {
           <StyleSpan color="#fff">Videos</StyleSpan>
         </h2>
         <Container>
-          <Row>
-            <SliderComponent settings={settings3}>
-              {Videos.length > 0 &&
-                Videos?.map((ne) => (
-                  <Col key={ne._id} md={4}>
-                    <Card
-                      click={true}
-                      title={ne.assetName}
-                      tag={ne.assetExt}
-                      Image={ne.assetUrl}
-                      description={
-                        ne.eventDescription &&
-                        HTMLReactParser(ne.eventDescription)
-                      }
-                    />
-                  </Col>
-                ))}
-            </SliderComponent>
-          </Row>
+          {Videos.length == 0 ? (
+            <Shimmer type={"card"} />
+          ) : (
+            <Row>
+              <SliderComponent settings={settings3}>
+                {Videos.length > 0 &&
+                  Videos?.map((ne) => (
+                    <Col key={ne._id} md={4}>
+                      <Card
+                        click={true}
+                        title={ne.assetName}
+                        tag={ne.assetExt}
+                        Image={ne.assetUrl}
+                        description={
+                          ne.eventDescription &&
+                          HTMLReactParser(ne.eventDescription)
+                        }
+                      />
+                    </Col>
+                  ))}
+              </SliderComponent>
+            </Row>
+          )}
+
           {/* <StyledButton color="#185b2d" backgroundcolor="#fff">
             See More News
           </StyledButton> */}
@@ -150,33 +166,37 @@ export default function Home() {
           News <StyleSpan color="#185b2d">Section</StyleSpan>
         </h2>
         <Container>
-          <Row>
-            <SliderComponent settings={settings3}>
-              {NewsEvent?.map((ne) => (
-                <Col key={ne._id} md={4}>
-                  <Link
-                    href={"/NewsDetail"}
-                    onClick={() => {
-                      if (typeof window !== "undefined") {
-                        localStorage.setItem("news", ne._id);
-                      }
-                    }}
-                  >
-                    <Card
-                      title={ne.eventTitle}
-                      click={false}
-                      tag={ne.eventType}
-                      Image={ne.Image}
-                      description={
-                        ne.eventDescription &&
-                        HTMLReactParser(ne.eventDescription)
-                      }
-                    />
-                  </Link>
-                </Col>
-              ))}
-            </SliderComponent>
-          </Row>
+          {NewsEvent.length == 0 ? (
+            <Shimmer type={"card"} />
+          ) : (
+            <Row>
+              <SliderComponent settings={settings3}>
+                {NewsEvent?.map((ne) => (
+                  <Col key={ne._id} md={4}>
+                    <Link
+                      href={"/NewsDetail"}
+                      onClick={() => {
+                        if (typeof window !== "undefined") {
+                          localStorage.setItem("news", ne._id);
+                        }
+                      }}
+                    >
+                      <Card
+                        title={ne.eventTitle}
+                        click={false}
+                        tag={ne.eventType}
+                        Image={ne.Image}
+                        description={
+                          ne.eventDescription &&
+                          HTMLReactParser(ne.eventDescription)
+                        }
+                      />
+                    </Link>
+                  </Col>
+                ))}
+              </SliderComponent>
+            </Row>
+          )}
           <div className="d-flex justify-content-center mt-4">
             {" "}
             <StyledButton
@@ -201,24 +221,29 @@ export default function Home() {
           School <StyleSpan color="#185b2d">Gallery</StyleSpan>
         </h2>
         <Container>
-          <Row>
-            <SliderComponent settings={settings3}>
-              {GalleryImages?.map((ne) => (
-                <Col key={ne._id} md={4}>
-                  <Card
-                    click={true}
-                    title={ne.assetName}
-                    tag={"Gallery"}
-                    Image={ne.assetUrl}
-                    description={
-                      ne.eventDescription &&
-                      HTMLReactParser(ne.eventDescription)
-                    }
-                  />
-                </Col>
-              ))}
-            </SliderComponent>
-          </Row>
+          {GalleryImages.length == 0 ? (
+            <Shimmer type={"card"} />
+          ) : (
+            <Row>
+              <SliderComponent settings={settings3}>
+                {GalleryImages?.map((ne) => (
+                  <Col key={ne._id} md={4}>
+                    <Card
+                      click={true}
+                      title={ne.assetName}
+                      tag={"Gallery"}
+                      Image={ne.assetUrl}
+                      description={
+                        ne.eventDescription &&
+                        HTMLReactParser(ne.eventDescription)
+                      }
+                    />
+                  </Col>
+                ))}
+              </SliderComponent>
+            </Row>
+          )}
+
           {/* <div className="d-flex justify-content-center mt-4">
             {" "}
             <StyledButton

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
+import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import {
   NavBar,
@@ -24,6 +25,7 @@ import useWindowDimensions from "./Dimensions";
 export default function Header() {
   const [cclass, setsClass] = useState("");
   const [lclass, setLClass] = useState("normal-logo");
+  const [searc, setSearch] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const { menus, submenus } = useSelector((state) => state.Menus);
   const [draweropen, setDraweropen] = useState(false);
@@ -46,6 +48,7 @@ export default function Header() {
     if (window.scrollY >= 55) {
       setsClass("navShrink");
       setLClass("logoShrink");
+      setSearch(false);
     } else {
       setsClass("nav");
       setLClass("normal-logo");
@@ -126,6 +129,18 @@ export default function Header() {
                   </StyleLink>
                 ))}
             </StyledRUL>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: 10,
+                cursor: "pointer",
+              }}
+              onClick={() => setSearch(!searc)}
+            >
+              <img src="/search.png" height={20} />
+            </div>
           </>
         ) : (
           <>
@@ -220,6 +235,29 @@ export default function Header() {
           </>
         )}
       </NavBar>
+      {searc == true && (
+        <>
+          <Script
+            src="https://cse.google.com/cse.js?cx=e60d373261a394525"
+            async
+          />
+          <div
+            style={{
+              padding: "3rem",
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+              overflow: "scroll",
+              zIndex: 1,
+            }}
+          >
+            <div>
+              <h6>Search ICSK-KW</h6>
+              <div class="gcse-searchbox-only"></div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

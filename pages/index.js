@@ -170,7 +170,7 @@ export default function Home() {
             <Col md={6} className="heading-section">
               {" "}
               <p>Our Videos Section</p>
-              <h1>
+              <h1 className="animate__animated animate__bounceIn ">
                 <StyleSpan color="#fcc92f" className="">
                   A Glimpse{" "}
                 </StyleSpan>
@@ -190,7 +190,7 @@ export default function Home() {
               <p className="cssanimation leSnake sequence">
                 School News & Events
               </p>
-              <h1>
+              <h1 className="animate__bounceOut">
                 <StyleSpan color="#fcc92f">DISCOVER </StyleSpan>
                 <br />
                 NEWS AND ACTIVITIES

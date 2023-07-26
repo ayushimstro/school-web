@@ -44,7 +44,7 @@ export default function Feature() {
         <div className="cloud bgRed text-center mt-4">
           <Container>
             {" "}
-            <h2 style={{ color: "#fff" }}>ICSK Cloud</h2>
+            <h2>  <StyleSpan color="#fcc92f">ICSK</StyleSpan> Cloud</h2>
             <p>
               The ICSK Cloud is an solution exclusively for parents and staff
               which comprises of Features such as attendance, timetable,
@@ -56,7 +56,7 @@ export default function Feature() {
         </div>
         <div className="e-library container">
           <h2 className="text-center mb-3">
-            High <StyleSpan style={{ color: "#185b2d" }}>Tech Labs</StyleSpan>
+            High <StyleSpan style={{ color: "#fcc92f" }}>Tech Labs</StyleSpan>
           </h2>
           <img src="https://media.istockphoto.com/id/1256323645/photo/multi-ethnic-female-team-studying-dna-mutations-using-microscope-in-protective-workwear.jpg?s=612x612&w=0&k=20&c=2G6dg3skp9mM7xwBlpw0HCeCZb4oHXDWKlCRpqyDyGA=" />
         </div>
@@ -127,7 +127,7 @@ export default function Feature() {
         <div className="bgRed mt-4">
           <Container>
             <div className="text-center about-Counsel">
-              <h2 style={{ color: "#fff" }}>About The Counsellor</h2>
+              <h2 ><StyleSpan color="#fcc92f">About The </StyleSpan>Counsellor</h2>
               <p>
                 The School has rich Psychology Department since the subject
                 Psychology is offered at Sr Secondary level and opted by many
@@ -144,8 +144,8 @@ export default function Feature() {
       <div className="container mt-5">
         <div className="carrer-assessment">
           <h2 className="text-center mb-4">
-            <StyleSpan style={{ color: "#185b2d" }}>Psychometric</StyleSpan>{" "}
-            Career Assessments
+            Psychometric
+            <StyleSpan style={{ color: "#fcc92f" }}> Career Assessments</StyleSpan>{" "}
           </h2>
           <div className="row">
             <div className="col-sm-4">

@@ -8,7 +8,7 @@ export default function Mission({ width, content }) {
     <>
       <div className="our-mission mt-4">
         <h2 className="text-center" data-aos={width < 768 ? "" : "fade-up"}>
-          Vision and <StyleSpan color="#185b2d">Mission</StyleSpan>
+          Vision and <StyleSpan color="#fcc92f">Mission</StyleSpan>
         </h2>
 
         <Container>

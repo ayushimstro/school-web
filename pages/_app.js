@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { Provider } from "react-redux";
 import { wrapper } from "../redux/store";
 import Loader from "../components/Common/Loader";
@@ -25,10 +25,10 @@ function MyApp({ Component, pageProps, ...rest }) {
   const { width } = useWindowDimensions();
   useEffect(() => {
     async function AOSINIT() {
-      return AOS.init({
-        duration: 1200,
-        disable: "mobile",
-      });
+      // return AOS.init({
+      //   duration: 1200,
+      //   disable: "mobile",
+      // });
     }
     async function GetModalData() {
       const response = await GetCMS("home");

@@ -13,7 +13,7 @@ export default function Highlights({ width, hightlights, cms }) {
     <>
       <div className="highlights mt-4">
         <h2 className="text-center">
-          Our<StyleSpan color="#185b2d">Highlights</StyleSpan>{" "}
+          Our <StyleSpan color="#fcc92f">Highlights</StyleSpan>{" "}
         </h2>
         <div
           className="highlight-content "
@@ -89,8 +89,8 @@ export default function Highlights({ width, hightlights, cms }) {
         </div>
         <div className="section-div bgRed mt-4">
           <h5 className="text-center p-2">
-            <StyleSpan color="#fff">
-              AN EDUCATION WITH VALUES & CULTURAL FIESTAS
+            
+              AN EDUCATION WITH <StyleSpan color="#fcc92f">VALUES & CULTURAL FIESTAS
             </StyleSpan>
           </h5>
           <Container fluid>

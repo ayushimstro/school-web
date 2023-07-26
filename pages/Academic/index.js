@@ -57,7 +57,7 @@ export default function Academic() {
           <div className="board-exam bgRed">
             <Container>
               <h3 className="text-center">
-                <StyleSpan color="#fff">Board of Examination</StyleSpan>
+               Board of  <StyleSpan color="#fcc92f">Examination</StyleSpan>
               </h3>
               <Accordion>
                 <Accordion.Item eventKey="0">
@@ -118,7 +118,7 @@ export default function Academic() {
             <Container>
               {" "}
               <h3 className="text-center">
-                <StyleSpan color="#185b2d">Enrichment coaching</StyleSpan>
+      <StyleSpan color="#fcc92f">Enrichment</StyleSpan> coaching
               </h3>
               <p data-aos={width < 768 ? "" : "zoom-in"}>
                 Enrichment classes for the high achievers are inculcated as a
@@ -273,7 +273,7 @@ export default function Academic() {
           </div>
           <div className="value-education bgRed mt-4">
             <h3 className="text-center p-3">
-              <StyleSpan color="#fff">Value Education</StyleSpan>
+              <StyleSpan color="#fcc92f">Value </StyleSpan>Education
             </h3>
             <Container>
               <Row>
@@ -317,7 +317,7 @@ export default function Academic() {
             </Container>
           </div>
           <div className="special-coaching">
-            <h3 className="text-center p-4">Special Coaching</h3>
+            <h3 className="text-center p-4">Special <StyleSpan color="#fcc92f"> Coaching</StyleSpan> </h3>
 
             <Container>
               <Tabs

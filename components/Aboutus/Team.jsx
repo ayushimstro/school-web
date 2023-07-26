@@ -26,7 +26,7 @@ export default function Team({ width }) {
       <div className="team bgRed mb-4">
         <h3 className="text-center">
           {" "}
-          <StyleSpan color="#fff">TEAM</StyleSpan>
+          <StyleSpan color="#fcc92f">TEAM</StyleSpan>
         </h3>
 
         <div

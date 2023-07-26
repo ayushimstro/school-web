@@ -3,48 +3,48 @@
 @import "./common.css";
 @import "./responsive.css";
 @import "./blog.css";
-
+@import "./animation.css";
 
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
-@font-face {
-  font-family: "Gotham";
-  src: local("Gotham"),
-    url("/fonts/Gotham/Gotham-Book.otf") format("opentype") tech(color-COLRv1), url("/fonts/Gotham/Gotham-Book.otf")
+/* @font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("/fonts/Montserrat/Gotham-Book.otf") format("opentype") tech(color-COLRv1), url("/fonts/Gotham/Gotham-Book.otf")
       format("opentype"), url("/fonts/Gotham/Gotham-Book.otf") format("woff");
-}
+} */
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Gotham;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   scroll-behavior: smooth;
 }
 p, span, label {
   font-size: .8rem;
-  font-family: 'GOTHAM';
+  font-family: 'Montserrat';
 }
 h2 {
   font-size: 1.5rem;
-font-family: 'GOTHAM';
+font-family: 'Montserrat';
 
 }
 
 h3{
   font-size: 1.2rem !important;
-font-family: 'GOTHAM';
+font-family: 'Montserrat';
 
 }
 h4{
   font-size: 1rem;
-font-family: 'GOTHAM';
+font-family: 'Montserrat';
 
 }
 a {
   color: inherit;
   text-decoration: none;
-font-family: 'GOTHAM';
+font-family: 'Montserrat';
 
 }
 
@@ -58,14 +58,14 @@ table {
   border-spacing: 0;
   font-size: 0.85rem;
   border-radius: 20%;
-  font-family: 'GOTHAM';
+  font-family: 'Montserrat';
   overflow-x: auto;
 }
 
 table th,
 table td {
   border: 1px solid #000;
-  font-family: 'GOTHAM';
+  font-family: 'Montserrat';
   padding: 8px;
   text-align: left;
   white-space: nowrap;
@@ -74,17 +74,17 @@ table td {
 table thead th {
   background-color: #185b2d;
   color: #fff;
-  font-family: 'GOTHAM';
+  font-family: 'Montserrat';
 }
 
 table tbody tr:nth-child(even) {
   background-color: #f5f5f5;
-  font-family: 'GOTHAM';
+  font-family: 'Montserrat';
 }
 
 table tbody tr:hover {
   background-color: #e0f0e9;
-  font-family: 'GOTHAM';
+  font-family: 'Montserrat';
 }
 
 

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "add": "^2.0.6",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "babel-preset-next": "^1.4.0",
@@ -35,6 +37,7 @@
     "redux": "^4.2.1",
     "redux-toolkit": "^1.1.2",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.0.0-rc.1"
+    "styled-components": "^6.0.0-rc.1",
+    "yarn": "^1.22.19"
   }
 }

@@ -22,7 +22,7 @@ export default function NewsDetail() {
     GetSinglNews();
   }, []);
   return (
-    <Layout>
+    <Layout title={NewsDetail[0].eventTitle}>
       <BlogDetails blogDetails={NewsDetail[0]} />
     </Layout>
   );

@@ -48,8 +48,14 @@ img {
 .card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
-  background-color: #e0f0e9;
+  /* background-color: #e0f0e9; */
 font-family: 'GOTHAM';
+}
+.card img{
+  transition: transform .5s ease;
+}
+.card:hover img {
+  transform: scale(1.1);
 }
 
 .card:hover::before,
@@ -74,18 +80,18 @@ font-family: 'GOTHAM';
 @keyframes animateTopLeftBorder {
   0% {
     width: 0;
-    border-top-color: #185b2d;
+    border-top-color: #fcc92f;
   }
   50% {
     width: 100%;
-    border-top-color: #185b2d;
-    border-right-color: #185b2d;
+    border-top-color: #fcc92f;
+    border-right-color: #fcc92f;
   }
   100% {
     width: 100%;
     height: 100%;
-    border-top-color: #185b2d;
-    border-right-color: #185b2d;
+    border-top-color: #fcc92f;
+    border-right-color: #fcc92f;
   }
 }
 
@@ -97,19 +103,19 @@ font-family: 'GOTHAM';
   0% {
     width: 0;
     border-bottom-color: transparent;
-    border-left-color: #185b2d;
+    border-left-color: #fcc92f;
   }
   50% {
     width: 0;
     height: 100%;
-    border-bottom-color: #185b2d;
-    border-left-color: #185b2d;
+    border-bottom-color: #fcc92f;
+    border-left-color: #fcc92f;
   }
   100% {
     width: 100%;
     height: 100%;
-    border-bottom-color: #185b2d;
-    border-left-color: #185b2d;
+    border-bottom-color: #fcc92f;
+    border-left-color: #fcc92f;
   }
 }
 
@@ -137,7 +143,7 @@ font-family: 'GOTHAM';
 }
 
 .tag-blue {
-  background: #185b2d;
+  background: #fcc92f;
   color: #fafafa;
 }
 

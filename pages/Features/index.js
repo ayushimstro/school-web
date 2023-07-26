@@ -21,7 +21,7 @@ export default function Feature() {
     GetCMS();
   }, []);
   return (
-    <Layout title={"Features | "}>
+    <Layout title={"Features"}>
       <div className="feature">
         {Banner.length > 0 ? (
           <SliderComponent settings={settings}>

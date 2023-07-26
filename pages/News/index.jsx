@@ -24,7 +24,7 @@ export default function Blog() {
     window.addEventListener("scroll", changeBackground);
   }
   return (
-    <Layout>
+    <Layout title={"ICSK News"}>
       <div className={`inside-hero-one ${heroclass}`}>
         <div className="container">
           <h2 className="page-title font-recoleta">News</h2>

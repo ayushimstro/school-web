@@ -31,7 +31,7 @@ export default function Khaitan() {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout title="Khaitan">
         <div className="senior-branch">
           {Banner.length > 0 ? (
             <SliderComponent settings={settings}>

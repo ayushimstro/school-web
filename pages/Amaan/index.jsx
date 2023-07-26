@@ -31,7 +31,7 @@ export default function Amaan() {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout title={"Amman"}>
         <div className="senior-branch">
           {Banner.length > 0 ? (
             <SliderComponent settings={settings}>

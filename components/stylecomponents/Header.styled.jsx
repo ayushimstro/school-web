@@ -4,17 +4,18 @@ import Link from "next/link";
 export const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
-  font-family: "Gotham";
+  font-family: "Montserrat";
   background: ${(props) =>
     props.background ? props.background : "#000"} !important;
-  height: 38px;
+  height: ${(props) => (props.height ? props.height : "38px")};
   width: 100%;
   color: ${(props) => (props.color ? props.color : "#fff")};
 `;
 
 export const StyledLI = styled.li`
   display: inline-block;
-  padding: 5px 20px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
   cursor: pointer;
 `;
 export const StyledMLI = styled.li`
@@ -25,16 +26,17 @@ export const StyledMLI = styled.li`
 
 export const StyleLink = styled(Link)`
   ${StyledLI}:hover {
-    color: #fff;
+    color: #fcc92f;
   }
 `;
 export const StyledRLI = styled.li`
   display: inline-block;
   padding: 15px;
+  color: #000;
 `;
 export const StyledMRLI = styled.li`
   display: block;
-  padding: 5px 20px;
+  padding: 5px 10px;
 `;
 export const StyledUL = styled.ul`
   list-style: none;
@@ -60,11 +62,11 @@ export const StyledButton = styled.button`
     props.backgroundcolor ? props.backgroundcolor : "transparent"};
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border: 1px solid #185b2d;
+  border: 1px solid #fcc92f;
   transition: all 0.5s ease;
   &:hover {
     color: #fff;
     border: none;
-    background: #185b2d;
+    background: #fcc92f;
   }
 `;

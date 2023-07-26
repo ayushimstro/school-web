@@ -13,7 +13,12 @@ import {
 import { Col, Container, Row } from "react-bootstrap";
 import CounterUp from "../components/Common/Counter";
 import SliderComponent from "../components/Common/Slider";
-import { settings, settings2, settings3 } from "../utils/slidersettings";
+import {
+  settings,
+  settings2,
+  settings4,
+  settings3,
+} from "../utils/slidersettings";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -27,7 +32,7 @@ import useWindowDimensions from "../components/Common/Dimensions";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Shimmer from "../components/Common/Shimmereffect";
-
+// import "animate.css";
 // import Footer from '../components/Common/Footer';
 export default function Home() {
   const arr = [1, 2, 3, 4];
@@ -77,7 +82,7 @@ export default function Home() {
           <Row>
             <Col md={6} className="event-slider2">
               <h2 className="text-center">
-                Our <StyleSpan>Events</StyleSpan>
+                Our <StyleSpan color="#fcc92f">Events</StyleSpan>
               </h2>
               {Events.length == 0 ? (
                 <Shimmer type={"card-text"} />
@@ -104,7 +109,7 @@ export default function Home() {
             </Col>
             <Col md={6} className="event-slider">
               <h2 className="text-center">
-                Our <StyleSpan color="#185b2d">Features</StyleSpan>
+                Our <StyleSpan color="#fcc92f">Features</StyleSpan>
               </h2>
               {features.length == 0 ? (
                 <Shimmer type={"card-text"} />
@@ -127,86 +132,117 @@ export default function Home() {
         </Container>
       </div>
       <div className="videos-section">
-        <h2>
-          <StyleSpan color="#fff">Our Popular</StyleSpan>{" "}
-          <StyleSpan color="#fff">Videos</StyleSpan>
-        </h2>
         <Container>
-          {Videos.length == 0 ? (
-            <Shimmer type={"card"} />
-          ) : (
-            <Row>
-              <SliderComponent settings={settings3}>
-                {Videos.length > 0 &&
-                  Videos?.map((ne) => (
-                    <Col key={ne._id} md={4}>
-                      <Card
-                        click={true}
-                        title={ne.assetName}
-                        tag={ne.assetExt}
-                        Image={ne.assetUrl}
-                        description={
-                          ne.eventDescription &&
-                          HTMLReactParser(ne.eventDescription)
-                        }
-                      />
-                    </Col>
-                  ))}
-              </SliderComponent>
-            </Row>
-          )}
+          <Row>
+            <Col md={6}>
+              {" "}
+              <Container>
+                {Videos.length == 0 ? (
+                  <Shimmer type={"card"} />
+                ) : (
+                  <Row>
+                    <SliderComponent settings={settings4}>
+                      {Videos.length > 0 &&
+                        Videos?.map((ne) => (
+                          <Col key={ne._id} md={4}>
+                            <Card
+                              click={true}
+                              title={ne.assetName}
+                              tag={ne.assetExt}
+                              Image={ne.assetUrl}
+                              description={
+                                ne.eventDescription &&
+                                HTMLReactParser(ne.eventDescription)
+                              }
+                            />
+                          </Col>
+                        ))}
+                    </SliderComponent>
+                  </Row>
+                )}
 
-          {/* <StyledButton color="#185b2d" backgroundcolor="#fff">
+                {/* <StyledButton color="#185b2d" backgroundcolor="#fff">
             See More News
           </StyledButton> */}
+              </Container>
+            </Col>
+
+            <Col md={6} className="heading-section">
+              {" "}
+              <p>Our Videos Section</p>
+              <h1>
+                <StyleSpan color="#fcc92f" className="">
+                  A Glimpse{" "}
+                </StyleSpan>
+                <br />
+                into ICSKs
+                <br /> Community
+              </h1>
+            </Col>
+          </Row>
         </Container>
       </div>
       <div className="news-section">
-        <h2>
-          News <StyleSpan color="#185b2d">Section</StyleSpan>
-        </h2>
         <Container>
-          {NewsEvent.length == 0 ? (
-            <Shimmer type={"card"} />
-          ) : (
-            <Row>
-              <SliderComponent settings={settings3}>
-                {NewsEvent?.map((ne) => (
-                  <Col key={ne._id} md={4}>
-                    <Link
-                      href={"/NewsDetail"}
-                      onClick={() => {
-                        if (typeof window !== "undefined") {
-                          localStorage.setItem("news", ne._id);
-                        }
-                      }}
-                    >
-                      <Card
-                        title={ne.eventTitle}
-                        click={false}
-                        tag={ne.eventType}
-                        Image={ne.Image}
-                        description={
-                          ne.eventDescription &&
-                          HTMLReactParser(ne.eventDescription)
-                        }
-                      />
-                    </Link>
-                  </Col>
-                ))}
-              </SliderComponent>
-            </Row>
-          )}
-          <div className="d-flex justify-content-center mt-4">
-            {" "}
-            <StyledButton
-              color="#185b2d"
-              backgroundcolor="#fff"
-              onClick={() => router.push("/News")}
-            >
-              See More News
-            </StyledButton>
-          </div>
+          <Row>
+            <Col md={6}>
+              {" "}
+              <p className="cssanimation leSnake sequence">
+                School News & Events
+              </p>
+              <h1>
+                <StyleSpan color="#fcc92f">DISCOVER </StyleSpan>
+                <br />
+                NEWS AND ACTIVITIES
+                <br /> IN OUR SCHOOL
+              </h1>
+              <div className="d-flex justify-content-center mt-4">
+                {" "}
+                <StyledButton
+                  color="#fcc92f"
+                  backgroundcolor="#fff"
+                  onClick={() => router.push("/News")}
+                >
+                  See More News
+                </StyledButton>
+              </div>
+            </Col>
+            <Col md={6}>
+              <Container>
+                {NewsEvent.length == 0 ? (
+                  <Shimmer type={"card"} />
+                ) : (
+                  <Row>
+                    <SliderComponent settings={settings4}>
+                      {NewsEvent?.map((ne) => (
+                        <Col key={ne._id} md={4}>
+                          <Link
+                            href={"/NewsDetail"}
+                            onClick={() => {
+                              if (typeof window !== "undefined") {
+                                localStorage.setItem("news", ne._id);
+                              }
+                            }}
+                          >
+                            <Card
+                              title={ne.eventTitle}
+                              click={false}
+                              tag={ne.eventType}
+                              Image={ne.Image}
+                              description={
+                                ne.eventDescription &&
+                                HTMLReactParser(ne.eventDescription)
+                              }
+                            />
+                          </Link>
+                        </Col>
+                      ))}
+                    </SliderComponent>
+                  </Row>
+                )}
+              </Container>
+            </Col>
+          </Row>
         </Container>
       </div>
       <div className="event-section">
@@ -217,34 +253,43 @@ export default function Home() {
         </Container>
       </div>
       <div className="news-section">
-        <h2>
-          School <StyleSpan color="#185b2d">Gallery</StyleSpan>
-        </h2>
         <Container>
-          {GalleryImages.length == 0 ? (
-            <Shimmer type={"card"} />
-          ) : (
-            <Row>
-              <SliderComponent settings={settings3}>
-                {GalleryImages?.map((ne) => (
-                  <Col key={ne._id} md={4}>
-                    <Card
-                      click={true}
-                      title={ne.assetName}
-                      tag={"Gallery"}
-                      Image={ne.assetUrl}
-                      description={
-                        ne.eventDescription &&
-                        HTMLReactParser(ne.eventDescription)
-                      }
-                    />
-                  </Col>
-                ))}
-              </SliderComponent>
-            </Row>
-          )}
+          <Row>
+            <Col md={6}>
+              <p>Our School in Pictures</p>
+              <h1>
+                <StyleSpan color="#fcc92f">Artistry in Motion: </StyleSpan>
+                <br />
+                Snapshot of
+                <br /> School Events
+              </h1>
+            </Col>
+            <Col md={6}>
+              <Container>
+                {GalleryImages.length == 0 ? (
+                  <Shimmer type={"card"} />
+                ) : (
+                  <Row>
+                    <SliderComponent settings={settings4}>
+                      {GalleryImages?.map((ne) => (
+                        <Col key={ne._id} md={4}>
+                          <Card
+                            click={true}
+                            title={ne.assetName}
+                            tag={"Gallery"}
+                            Image={ne.assetUrl}
+                            description={
+                              ne.eventDescription &&
+                              HTMLReactParser(ne.eventDescription)
+                            }
+                          />
+                        </Col>
+                      ))}
+                    </SliderComponent>
+                  </Row>
+                )}
 
-          {/* <div className="d-flex justify-content-center mt-4">
+                {/* <div className="d-flex justify-content-center mt-4">
             {" "}
             <StyledButton
               color="#185b2d"
@@ -254,6 +299,9 @@ export default function Home() {
               See More News
             </StyledButton>
           </div> */}
+              </Container>
+            </Col>
+          </Row>
         </Container>
       </div>
       {/* </Container> */}

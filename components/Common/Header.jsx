@@ -22,6 +22,8 @@ import { GetNews } from "../../services/websiteServices";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import useWindowDimensions from "./Dimensions";
+import Modal from "react-responsive-modal";
+import { Navbar } from "react-bootstrap";
 export default function Header() {
   const [cclass, setsClass] = useState("");
   const [lclass, setLClass] = useState("normal-logo");
@@ -57,6 +59,20 @@ export default function Header() {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", changeBackground);
   }
+  const onHandleSearch = () => {
+    var script = document.createElement("script");
+    script.setAttribute("type", "text/javascript");
+    script.setAttribute(
+      "src",
+      "https://cse.google.com/cse.js?cx=e60d373261a394525"
+    );
+    if (document.body == null) {
+      document.head.appendChild(script);
+    } else {
+      document.body.appendChild(script);
+    }
+    setSearch(!searc);
+  };
   const renderSubMenu = (men) => {
     return;
     men.SubMenu == true && (
@@ -69,17 +85,41 @@ export default function Header() {
   };
   return (
     <div id="nav" className={cclass}>
-      <NavBar background={"#185b2d"} color={theme[0]?.navbarColor}>
+      <NavBar background={"#273051"} height={"90px"}>
+        <div>
+          <img
+            src="https://www.icsk-kw.com/assets_web/img/Logo-811.png"
+            height={89}
+          />
+        </div>
+        <div className="left-container">
+          <div className="social-icons">
+            <img src="/fb1.png" className="fbimg" />
+            <img src="/insta.png"  />
+            <img src="/twitter.png"  />
+            <img src="/youtube.png"  />
+          </div>
+          <div className="Button-container">
+            <button className="contact-us">Contact us now</button>
+            <button className="enroll">Enroll Now</button>
+          </div>
+        </div>
+      </NavBar>
+      <NavBar background={"#fff"} color={theme[0]?.navbarColor}>
         {width > 600 ? (
           <>
             <StyledUL>
               {menus?.length > 0 &&
-                menus?.slice(0, 4).map((men) => (
-                  <StyleLink href={men.path} key={men._id}>
+                menus.map((men) => (
+                  <StyleLink
+                    href={men.path}
+                    key={men._id}
+                    className={men.animation == true ? "blink" : ""}
+                  >
                     <StyledLI>
                       {" "}
                       {men.MenuName}{" "}
-                      {men.SubMenu == true && (
+                      {(men.SubMenu == true || men.submenu == true) && (
                         <div class="dropdown-content">
                           {filterSubmenu(men._id).map((sub) => (
                             <Link href={sub.path} key={sub._id}>
@@ -92,43 +132,7 @@ export default function Header() {
                   </StyleLink>
                 ))}
             </StyledUL>
-            <div
-              style={{
-                background: "#fff",
-                color: "#000",
-                height: 90,
-                width: 200,
-                zIndex: 1,
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 50px;",
-                alignItems: "center",
-                borderBottomRightRadius: 20,
-                borderBottomLeftRadius: 20,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              className={lclass}
-              id="logo"
-            >
-              <img src="/logo.png" />
-            </div>
-            <StyledRUL className="right-nav">
-              {menus?.length > 0 &&
-                menus?.slice(4, 8).map((men) => (
-                  <StyleLink href={men.path} key={men._id}>
-                    <StyledLI>{men.MenuName}</StyledLI>
-                    {men.SubMenu == true && (
-                      <div class="dropdown-content">
-                        {filterSubmenu(men._id).map((sub) => (
-                          <Link href={sub.path} key={sub._id}>
-                            {sub.SubMenu}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </StyleLink>
-                ))}
-            </StyledRUL>
+
             <div
               style={{
                 display: "flex",
@@ -137,9 +141,9 @@ export default function Header() {
                 marginRight: 10,
                 cursor: "pointer",
               }}
-              onClick={() => setSearch(!searc)}
+              onClick={() => onHandleSearch()}
             >
-              <img src="/search.png" height={20} />
+              <img src="/searchi.png" height={20} />
             </div>
           </>
         ) : (
@@ -188,11 +192,12 @@ export default function Header() {
               </div>
               <StyledMUL>
                 {menus?.length > 0 &&
-                  menus?.slice(0, 4).map((men) => (
+                  menus?.slice(0, menus.length - 2).map((men) => (
                     <StyleLink
                       href={men.path}
                       key={men._id}
                       onClick={() => setDraweropen(false)}
+                      className={men.animation == true ? "blink" : ""}
                     >
                       <StyledMLI>
                         {" "}
@@ -212,11 +217,12 @@ export default function Header() {
               </StyledMUL>
               <StyledMRUL className="right-nav">
                 {menus?.length > 0 &&
-                  menus?.slice(4, 8).map((men) => (
+                  menus?.slice(4, menus.length - 4).map((men) => (
                     <StyleLink
                       href={men.path}
                       key={men._id}
                       onClick={() => setDraweropen(false)}
+                      className={men.animation == true ? "blink" : ""}
                     >
                       <StyledRLI>{men.MenuName}</StyledRLI>
                       {men.SubMenu == true && (
@@ -235,29 +241,36 @@ export default function Header() {
           </>
         )}
       </NavBar>
-      {searc == true && (
-        <>
-          <Script
-            src="https://cse.google.com/cse.js?cx=e60d373261a394525"
-            async
-          />
+
+      <>
+        <Modal
+          open={searc}
+          onClose={() => setSearch(false)}
+          center
+          styles={{
+            modal: {
+              borderRadius: 20,
+            },
+          }}
+        >
+          {/* <Script
+              src="https://cse.google.com/cse.js?cx=e60d373261a394525"
+              async
+            /> */}
           <div
             style={{
-              padding: "3rem",
               display: "flex",
+              flexDirection: "column",
               justifyContent: "space-around",
               alignItems: "center",
-              overflow: "scroll",
-              zIndex: 1,
+              width: "100%",
             }}
           >
-            <div>
-              <h6>Search ICSK-KW</h6>
-              <div class="gcse-searchbox-only"></div>
-            </div>
+            <h6>Search ICSK-KW</h6>
+            <div class="gcse-searchbox-only"></div>
           </div>
-        </>
-      )}
+        </Modal>
+      </>
     </div>
   );
 }

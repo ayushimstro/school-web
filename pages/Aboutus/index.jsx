@@ -38,7 +38,7 @@ export default function Aboutus() {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout title={"About Us"}>
         <div className="about-us">
           <SliderComponent settings={settings}>
             {banner.map((ban) => (

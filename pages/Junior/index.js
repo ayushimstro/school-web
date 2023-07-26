@@ -31,7 +31,7 @@ export default function Junior() {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout title={"ICSK Junior"}>
         <div className="senior-branch">
           {Banner.length > 0 ? (
             <SliderComponent settings={settings}>

@@ -34,7 +34,7 @@ export default function Academic() {
   const { width } = useWindowDimensions();
   return (
     <>
-      <Layout>
+      <Layout title={"Academic"}>
         <div className="">
           {Banner.length > 0 ? (
             <SliderComponent settings={settings}>
